@@ -1,0 +1,1 @@
+{"url": "https://www.imdb.com/name/nm0001804", "spouse": ["Felicity Blunt"], "education": ["State University of New York's Conservatory of Theater Arts"], "parent": ["Joan (Tropiano)", "Stanley Tucci"], "starred_in": ["The Lovely Bones", "Lucky Number Slevin", "The Devil Wears Prada", "Captain America: The First Avenger", "The Hunger Games", "Winchell", "Monk", "Conspiracy"] }

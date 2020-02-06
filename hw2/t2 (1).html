@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>INF 558: Building Knowledge Graphs</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            h1, h2, h3 {
+                text-align: center;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body class="vscode-light">
+        <h1 id="inf-558-building-knowledge-graphs">INF 558: Building Knowledge Graphs</h1>
+<h2 id="report-of-homework2-information-extraction">Report of Homework2: Information Extraction</h2>
+<h3 id="author-zongdi-xu-usc-id-5900-5757-70">Author: Zongdi Xu (USC ID 5900-5757-70)</h3>
+<h3 id="date-jan-30-2020">Date: Jan 30, 2020</h3>
+<h3 id="task-21">Task 2.1</h3>
+<p>From the page of <a href="https://www.imdb.com/name/nm0912001/bio?ref_=nm_ov_bio_sm">Jack Warden</a>, the attributes extracted from that biography text are showed as below:
+<img src="file:////Users/crxon/558/hw2/screenshot-2.1.png" alt="title"></p>
+<p>Pick the sentence <code>He played the coach on TV's Mister Peepers</code> for visualization:</p>
+<pre><code class="language-python"><div><span class="hljs-comment"># !python3 -m spacy download en_core_web_sm</span>
+<span class="hljs-keyword">import</span> spacy
+<span class="hljs-keyword">import</span> en_core_web_sm
+<span class="hljs-keyword">import</span> csv
+nlp = en_core_web_sm.load()
+</div></code></pre>
+<pre><code class="language-python"><div>sentence = nlp(<span class="hljs-string">"He played the coach on TV's Mister Peepers"</span>)
+
+<span class="hljs-keyword">from</span> spacy <span class="hljs-keyword">import</span> displacy
+options = {<span class="hljs-string">"distance"</span>: <span class="hljs-number">96</span>}
+displacy.render(sentence, style=<span class="hljs-string">"dep"</span>, options=options)
+</div></code></pre>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en" id="8b9c790960414c2b8447c791aa371f70-0" class="displacy" width="914" height="329.0" direction="ltr" style="max-width: none; height: 329.0px; color: #000000; background: #ffffff; font-family: Arial; direction: ltr">
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="50">He</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="50">PRON</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="146">played</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="146">VERB</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="242">the</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="242">DET</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="338">coach</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="338">NOUN</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="434">on</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="434">ADP</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="530">TV</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="530">NOUN</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="626">'s</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="626">PART</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="722">Mister</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="722">PROPN</tspan>
+</text>
+<text class="displacy-token" fill="currentColor" text-anchor="middle" y="239.0">
+    <tspan class="displacy-word" fill="currentColor" x="818">Peepers</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="818">PROPN</tspan>
+</text>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-0" stroke-width="2px" d="M70,194.0 C70,146.0 131.0,146.0 131.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-0" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">nsubj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M70,196.0 L62,184.0 78,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-1" stroke-width="2px" d="M262,194.0 C262,146.0 323.0,146.0 323.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-1" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">det</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M262,196.0 L254,184.0 270,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-2" stroke-width="2px" d="M166,194.0 C166,98.0 328.0,98.0 328.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-2" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">dobj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M328.0,196.0 L336.0,184.0 320.0,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-3" stroke-width="2px" d="M358,194.0 C358,146.0 419.0,146.0 419.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-3" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">prep</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M419.0,196.0 L427.0,184.0 411.0,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-4" stroke-width="2px" d="M550,194.0 C550,50.0 813.0,50.0 813.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-4" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">poss</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M550,196.0 L542,184.0 558,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-5" stroke-width="2px" d="M550,194.0 C550,146.0 611.0,146.0 611.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-5" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">case</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M611.0,196.0 L619.0,184.0 603.0,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-6" stroke-width="2px" d="M742,194.0 C742,146.0 803.0,146.0 803.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-6" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">compound</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M742,196.0 L734,184.0 750,184.0" fill="currentColor"/>
+</g>
+<g class="displacy-arrow">
+    <path class="displacy-arc" id="arrow-8b9c790960414c2b8447c791aa371f70-0-7" stroke-width="2px" d="M454,194.0 C454,2.0 818.0,2.0 818.0,194.0" fill="none" stroke="currentColor"/>
+    <text dy="1.25em" style="font-size: 0.8em; letter-spacing: 1px">
+        <textPath xlink:href="#arrow-8b9c790960414c2b8447c791aa371f70-0-7" class="displacy-label" startOffset="50%" side="left" fill="currentColor" text-anchor="middle">pobj</textPath>
+    </text>
+    <path class="displacy-arrowhead" d="M818.0,196.0 L826.0,184.0 810.0,184.0" fill="currentColor"/>
+</g>
+</svg>
+<h3 id="task-22">Task 2.2</h3>
+<p>The template to apply extrators to the original entries:</p>
+<pre><code class="language-python"><div><span class="hljs-keyword">import</span> csv
+<span class="hljs-keyword">from</span> spacy.matcher <span class="hljs-keyword">import</span> Matcher
+tsv_reader = csv.reader(open(<span class="hljs-string">'entities_bio.tsv'</span>), delimiter=<span class="hljs-string">'\t'</span>)
+
+limit = <span class="hljs-number">500</span>
+count = <span class="hljs-number">0</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">matching</span><span class="hljs-params">(doc, pattern)</span>:</span>
+    result = []
+    <span class="hljs-keyword">for</span> sent <span class="hljs-keyword">in</span> doc.sents:
+        matcher = Matcher(nlp.vocab) 
+        matcher.add(<span class="hljs-string">"matching"</span>, <span class="hljs-literal">None</span>, pattern)  
+
+        matches = matcher(nlp(str(sent))) 
+        <span class="hljs-keyword">if</span> len(matches)&gt;<span class="hljs-number">0</span>:
+            match = matches[<span class="hljs-number">-1</span>]
+            span = sent[match[<span class="hljs-number">1</span>]:match[<span class="hljs-number">2</span>]] 
+            result.append(span.text)
+
+    <span class="hljs-keyword">return</span> result
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">max_length</span><span class="hljs-params">(list1, list2)</span>:</span>
+    <span class="hljs-keyword">if</span> len(list1)&gt;len(list2):
+        <span class="hljs-keyword">return</span> list1
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> list2
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">'cast.jl'</span>, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> fout:
+    <span class="hljs-keyword">for</span> (idx, (url, bio)) <span class="hljs-keyword">in</span> enumerate(tsv_reader):
+        count += <span class="hljs-number">1</span>
+        result = {}
+        result[<span class="hljs-string">'url'</span>] = url
+        result[<span class="hljs-string">'spouse'</span>] = max_length(matching(nlp(bio), pattern_spouse_lexical), matching(nlp(bio), pattern_spouse_syntactic))
+        result[<span class="hljs-string">'education'</span>] = max_length(matching(nlp(bio), pattern_education_lexical), matching(nlp(bio), pattern_spouse_syntactic))
+        result[<span class="hljs-string">'parent'</span>] = max_length(matching(nlp(bio), pattern_parent_lexical), matching(nlp(bio), pattern_spouse_syntactic))
+        result[<span class="hljs-string">'starred_in'</span>] = max_length(matching(nlp(bio), pattern_starred_in_lexical), matching(nlp(bio), pattern_spouse_syntactic))
+<span class="hljs-comment">#         for idx, sent in enumerate(nlp(bio).sents):</span>
+<span class="hljs-comment">#             pass</span>
+        fout.write(str(result)+<span class="hljs-string">'\n'</span>)
+        <span class="hljs-keyword">if</span> count&gt;=limit:
+            <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">pass</span>
+    fout.close()
+</div></code></pre>
+<h4 id="lexical-extractors">Lexical Extractors</h4>
+<pre><code class="language-python"><div>pattern_spouse_lexical = [
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'married'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'to'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_parent_lexical = [
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'born'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'to'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'and'</span>,<span class="hljs-string">'OP'</span>: <span class="hljs-string">'?'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'\s*'</span>}, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_education_lexical = [
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'^(attend|attended)$'</span>}},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_starred_in_lexical = [
+            {<span class="hljs-string">'TEXT'</span>: {<span class="hljs-string">'REGEX'</span>: <span class="hljs-string">'^(star|starred)$'</span>}},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'in'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+</div></code></pre>
+<h4 id="syntactic-extractors">Syntactic Extractors</h4>
+<pre><code class="language-python"><div><span class="hljs-comment"># define the pattern </span>
+pattern_spouse_syntactic = [
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADJ'</span>, <span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'married'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'to'</span>, <span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADP'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADJ'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'NOUN'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'ENT_TYPE'</span>: <span class="hljs-string">'PERSON'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_parent_syntactic = [
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'VERB'</span>, <span class="hljs-string">'ORTH'</span>: <span class="hljs-string">'born'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'to'</span>, <span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADP'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADJ'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'NOUN'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'ENT_TYPE'</span>: <span class="hljs-string">'PERSON'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'and'</span>, <span class="hljs-string">'POS'</span>: <span class="hljs-string">'CCONJ'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'?'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADJ'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'NOUN'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            {<span class="hljs-string">'ENT_TYPE'</span>: <span class="hljs-string">'PERSON'</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            {<span class="hljs-string">'IS_PUNCT'</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">'OP'</span>: <span class="hljs-string">'*'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_education_syntactic = [
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'VERB'</span>, <span class="hljs-string">'LEMMA'</span>: <span class="hljs-string">'attend'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+</div></code></pre>
+<pre><code class="language-python"><div>pattern_starred_in_syntactic = [
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'VERB'</span>, <span class="hljs-string">'LEMMA'</span>: <span class="hljs-string">'star'</span>},
+            {<span class="hljs-string">'POS'</span>: <span class="hljs-string">'ADP'</span>, <span class="hljs-string">'LOWER'</span>: <span class="hljs-string">'in'</span>},
+            {<span class="hljs-string">'OP'</span>: <span class="hljs-string">'+'</span>},
+            ]
+
+</div></code></pre>
+<h3 id="task-23">Task 2.3</h3>
+<p>Recall rates for every extractor:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>spouse</th>
+<th>education</th>
+<th>parent</th>
+<th>starred_in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lexical</td>
+<td>90%</td>
+<td>80%</td>
+<td>95%</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>Syntactic</td>
+<td>85%</td>
+<td>85%</td>
+<td>80%</td>
+<td>70%</td>
+</tr>
+</tbody>
+</table>
+
+    </body>
+    </html>

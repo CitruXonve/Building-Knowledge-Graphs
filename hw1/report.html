@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>INF 558: Building Knowledge Graphs</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            h1, h2, h3 {
+                text-align: center;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="inf-558-building-knowledge-graphs">INF 558: Building Knowledge Graphs</h1>
+<h2 id="report-of-homework1-crawling">Report of Homework1: Crawling</h2>
+<h3 id="author-zongdi-xu-usc-id-5900-5757-70">Author: Zongdi Xu (USC ID 5900-5757-70)</h3>
+<h3 id="date-jan-23-2020">Date: Jan 23, 2020</h3>
+<p></p>
+<h3 id="task-13">Task 1.3</h3>
+<ul>
+<li>
+<p>1.3.1 What is the seed URL(s) you used for each task?</p>
+<blockquote>
+<p><a href="https://www.imdb.com/search/title/?genres=sci-fi">https://www.imdb.com/search/title/?genres=sci-fi</a><br>
+<a href="https://www.imdb.com/search/name/?death_date=1990-01-01,&amp;gender=male,female">https://www.imdb.com/search/name/?death_date=1990-01-01,&amp;gender=male,female</a></p>
+</blockquote>
+</li>
+<li>
+<p>1.3.2 How did you manage to only collect movie/show or cast pages?</p>
+<blockquote>
+<p>For Task 1.1, the starting URL simply excludes those that are not movies or shows.  For Task 1.2, the crawler would not follow those cast pages links that appear to be not actors or actresses from the list.</p>
+</blockquote>
+</li>
+<li>
+<p>1.3.3 Did you need to discard irrelevant pages? If so, how?</p>
+<blockquote>
+<p>No need to discard irrelevant pages since there wasn't any such page.</p>
+</blockquote>
+</li>
+<li>
+<p>1.3.4 Did you collect the required number of pages? If you were not able to do so, please describe and explain your issues.</p>
+<blockquote>
+<p>Yes.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="task-2">Task 2</h3>
+<p>2 chained extractors are used here.</p>
+<ul>
+<li>
+<p>Extractor 1</p>
+<blockquote>
+<p>Input: List of seed URLs<br>
+Output: URLs of Romance movies/shows pages<br>
+Role: Crawling every movie/show link from the lists of search pages<br></p></blockquote><blockquote><p>
+Screenshot:<br>
+<img src="file:////Users/crxon/558/hw1/extractor1.jpg" alt=""></p>
+</blockquote>
+</li>
+<li>
+<p>Extractor 2</p>
+<blockquote>
+<p>Input: URL of a specific Romance movies/shows page<br>
+Output: Movie/show attributes in CSV format<br>
+Role: Crawling attributes from every specific movie/show page<br>
+</p></blockquote><blockquote><p>
+Screenshot:<br>
+<img src="file:////Users/crxon/558/hw1/extractor2.jpg" alt=""></p>
+</blockquote>
+</li>
+</ul>
+
+    </body>
+    </html>
