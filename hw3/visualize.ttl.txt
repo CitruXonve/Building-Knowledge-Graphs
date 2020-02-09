@@ -38,3 +38,36 @@ my_ns:Movie a schema:Class ;
     schema:author schema:Person ; # writer
     schema:cinematographer schema:text ; # cinematographer
     schema:productionCompany my_ns:productionCompany . # production-company
+
+<https://www.imdb.com/title/tt0015864/> a my_ns:Movie ;
+    my_ns:grossIncome "$5.45M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "93,057" ;
+    schema:author "Charles Chaplin" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1925-12-02"^^xsd:date ;
+    schema:duration "95 min"^^xsd:time ;
+    schema:genre "Adventure, Comedy, Drama" ;
+    schema:headline "THE GOLD RUSH " ;
+    schema:producer "Charles Chaplin" ;
+    schema:productionCompany my_ns:company_0000012 .
+
+<https://www.imdb.com/title/tt0021749/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.02M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "154,848" ;
+    schema:author "None" ;
+    schema:cinematographer "Mark Marklatt" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1931-07-23"^^xsd:date ;
+    schema:duration "87 min"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "CITY LBGHTS " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000012 .
+
+my_ns:company_0000012 a my_ns:productionCompany ;
+    foaf:name "Charles Chaplin Productions" .

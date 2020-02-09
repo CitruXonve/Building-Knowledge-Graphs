@@ -1,0 +1,2306 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix my_ns: <http://inf558.org/myfakenamespace#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.imdb.com/title/tt0015864/> a my_ns:Movie ;
+    my_ns:grossIncome "$5.45M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "93,057" ;
+    schema:author "Charles Chaplin" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1925-12-02"^^xsd:date ;
+    schema:duration "95 min"^^xsd:time ;
+    schema:genre "Adventure, Comedy, Drama" ;
+    schema:headline "THE GOLD RUSH " ;
+    schema:producer "Charles Chaplin" ;
+    schema:productionCompany my_ns:company_0000012 .
+
+<https://www.imdb.com/title/tt0020629/> a my_ns:Movie ;
+    my_ns:grossIncome "$3.27M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "54,771" ;
+    schema:author "George Abbott" ;
+    schema:cinematographer "Arthur Edeson" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1930-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, War" ;
+    schema:headline "ALL QUIET ON THE WENTERN NRONT " ;
+    schema:producer "Carl Laemmle Jr." ;
+    schema:productionCompany my_ns:company_0000084 .
+
+<https://www.imdb.com/title/tt0021749/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.02M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "154,848" ;
+    schema:author "None" ;
+    schema:cinematographer "Mark Marklatt" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1931-07-23"^^xsd:date ;
+    schema:duration "87 min"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "CITY LBGHTS " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000012 .
+
+<https://www.imdb.com/title/tt0021884/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "61,044" ;
+    schema:author "Garrett Fort" ;
+    schema:cinematographer "Arthur Edeson" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1931-02-09"^^xsd:date ;
+    schema:duration "70 min"^^xsd:time ;
+    schema:genre "Drama, Horror, Sci-Fi" ;
+    schema:headline "FRANKENSTEIN " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000084 .
+
+<https://www.imdb.com/title/tt0023969/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "93" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "53,434" ;
+    schema:author "None" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1933-02-09"^^xsd:date ;
+    schema:duration "69 min"^^xsd:time ;
+    schema:genre "Comedy, Musical, War" ;
+    schema:headline "DUCK SOUP " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000057 .
+
+<https://www.imdb.com/title/tt0024216/> a my_ns:Movie ;
+    my_ns:grossIncome "$10.00M" ;
+    my_ns:imdbMetascore "90" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "75,614" ;
+    schema:author "James Ashmore Creelman" ;
+    schema:cinematographer "Vernon L. Walker" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1933-08-15"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Adventure, Horror, Sci-Fi" ;
+    schema:headline "KING KONG " ;
+    schema:producer "David O. Selznick" ;
+    schema:productionCompany my_ns:company_0000061 .
+
+<https://www.imdb.com/title/tt0025316/> a my_ns:Movie ;
+    my_ns:grossIncome "$4.36M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "87,704" ;
+    schema:author "Robert Riskin" ;
+    schema:cinematographer "Joseph Walker" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1934-11-25"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Comedy, Romance" ;
+    schema:headline "IT HAPPENED ONE NIGHT" ;
+    schema:producer "Harry Cohn" ;
+    schema:productionCompany my_ns:company_0000014 .
+
+<https://www.imdb.com/title/tt0027977/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.16M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "200,968" ;
+    schema:author "Charles Chaplin" ;
+    schema:cinematographer "Ira Morgan" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1936-02-09"^^xsd:date ;
+    schema:duration "87 min"^^xsd:time ;
+    schema:genre "Comedy, Drama, Family" ;
+    schema:headline "MODERN TIMES " ;
+    schema:producer "Charles Chaplin" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0029583/> a my_ns:Movie ;
+    my_ns:grossIncome "$184.93M" ;
+    my_ns:imdbMetascore "95" ;
+    my_ns:imdbRating "7.6" ;
+    my_ns:imdbVotes "170,972" ;
+    schema:author "None" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1938-03-19"^^xsd:date ;
+    schema:duration "83 min"^^xsd:time ;
+    schema:genre "Animation, Family, Fantasy" ;
+    schema:headline "SNOW WHITE AND THE SEVEN DWARFS " ;
+    schema:producer "None" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0029843/> a my_ns:Movie ;
+    my_ns:grossIncome "$3.98M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "45,011" ;
+    schema:author "Norman Reilly Raine" ;
+    schema:cinematographer "Sol Polito" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1938-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Action, Adventure, Romance" ;
+    schema:headline "THE ADVENTUREB OF ROBIN HOOD" ;
+    schema:producer "Jack L. Warner" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0029947/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "52,296" ;
+    schema:author "None" ;
+    schema:cinematographer "Russell Metty" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1938-05-11"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Comedy, Family, Romance" ;
+    schema:headline "BRINGING UP BABY " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000061 .
+
+<https://www.imdb.com/title/tt0031381/> a my_ns:Movie ;
+    my_ns:grossIncome "$198.68M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "272,637" ;
+    schema:author "Sidney Howard" ;
+    schema:cinematographer "Lee Garmes" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1940-02-09"^^xsd:date ;
+    schema:duration "23:00:00"^^xsd:time ;
+    schema:genre "Drama, History, Romance" ;
+    schema:headline "GONE WITHDTHE WIND" ;
+    schema:producer "David O. Selznick" ;
+    schema:productionCompany my_ns:company_0000063 .
+
+<https://www.imdb.com/title/tt0031679/> a my_ns:Movie ;
+    my_ns:grossIncome "$9.60M" ;
+    my_ns:imdbMetascore "73" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "101,130" ;
+    schema:author "Sidney Buchman" ;
+    schema:cinematographer "Joseph Walker" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1939-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama" ;
+    schema:headline "MR. SMITH GOES TO WASHINGTON" ;
+    schema:producer "Frank Capra" ;
+    schema:productionCompany my_ns:company_0000014 .
+
+<https://www.imdb.com/title/tt0031971/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "93" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "39,917" ;
+    schema:author "None" ;
+    schema:cinematographer "Bert Glennon" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1939-10-03"^^xsd:date ;
+    schema:duration "96 min"^^xsd:time ;
+    schema:genre "Adventure, Drama, Western" ;
+    schema:headline "STAGECDACH " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000089 .
+
+<https://www.imdb.com/title/tt0032138/> a my_ns:Movie ;
+    my_ns:grossIncome "$2.08M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "359,736" ;
+    schema:author "Noel Langley" ;
+    schema:cinematographer "Harold Rosson" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1939-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Adventure, Family, Fantasy" ;
+    schema:headline "THN WIZARD OF OZ" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000046 .
+
+<https://www.imdb.com/title/tt0032455/> a my_ns:Movie ;
+    my_ns:grossIncome "$76.41M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "84,125" ;
+    schema:author "William Peed" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1942-06-29"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Animation, Family, Fantasy" ;
+    schema:headline "FANTASIA " ;
+    schema:producer "Walt Disney" ;
+    schema:productionCompany my_ns:company_0000087 .
+
+<https://www.imdb.com/title/tt0032551/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.06M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "82,839" ;
+    schema:author "Nunnally Johnson" ;
+    schema:cinematographer "Gregg Toland" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1940-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama, History" ;
+    schema:headline "THE GRAPES OF WRATH " ;
+    schema:producer "None" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0032904/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "60,097" ;
+    schema:author "Donald Ogden Stewart" ;
+    schema:cinematographer "Joseph Ruttenberg" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1940-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Comedy, Romance" ;
+    schema:headline "THE PHILADELPHIA STORY " ;
+    schema:producer "Joseph L. Mankiewicz" ;
+    schema:productionCompany my_ns:company_0000046 .
+
+<https://www.imdb.com/title/tt0032910/> a my_ns:Movie ;
+    my_ns:grossIncome "$84.25M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "7.4" ;
+    my_ns:imdbVotes "122,099" ;
+    schema:author "None" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1940-02-09"^^xsd:date ;
+    schema:duration "88 min"^^xsd:time ;
+    schema:genre "Animation, Comedy, Family" ;
+    schema:headline "WINOCCHIO " ;
+    schema:producer "None" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0032976/> a my_ns:Movie ;
+    my_ns:grossIncome "$4.36M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "114,552" ;
+    schema:author "Robert E. Sherwood" ;
+    schema:cinematographer "George Barnes" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1940-08-03"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery, Romance" ;
+    schema:headline "REBECBA" ;
+    schema:producer "David O. Selznick" ;
+    schema:productionCompany my_ns:company_0000063 .
+
+<https://www.imdb.com/title/tt0033467/> a my_ns:Movie ;
+    my_ns:grossIncome "$1.59M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "375,748" ;
+    schema:author "Herman J. Mankiewicz" ;
+    schema:cinematographer "Gregg Toland" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1941-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery" ;
+    schema:headline "CITIZEN KANE" ;
+    schema:producer "Orson Welles" ;
+    schema:productionCompany my_ns:company_0000045 .
+
+<https://www.imdb.com/title/tt0033870/> a my_ns:Movie ;
+    my_ns:grossIncome "$2.11M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "143,548" ;
+    schema:author "John Huston" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1941-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Film-Noir, Mystery" ;
+    schema:headline "THE MALTESK FALCOB " ;
+    schema:producer "Hal B. Wallis" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0034240/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "22,561" ;
+    schema:author "Preston Sturges" ;
+    schema:cinematographer "John F. Seitz" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1942-02-09"^^xsd:date ;
+    schema:duration "90 min"^^xsd:time ;
+    schema:genre "Adventure, Comedy, Drama" ;
+    schema:headline "SULLIVAN'S TRAVELS " ;
+    schema:producer "B. G. DeSylva" ;
+    schema:productionCompany my_ns:company_0000056 .
+
+<https://www.imdb.com/title/tt0034583/> a my_ns:Movie ;
+    my_ns:grossIncome "$1.02M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "492,728" ;
+    schema:author "Howard W. Koch" ;
+    schema:cinematographer "Arthur Edeson" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1943-09-12"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Drama, Romance, War" ;
+    schema:headline "CASABLANCA" ;
+    schema:producer "Jack L. Warner" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0035575/> a my_ns:Movie ;
+    my_ns:grossIncome "$11.80M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "13,268" ;
+    schema:author "Robert Buckner" ;
+    schema:cinematographer "Sol Polito" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1943-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, Musical" ;
+    schema:headline "YANKEE DKODLE DANDY " ;
+    schema:producer "Jack L. Warner" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0036775/> a my_ns:Movie ;
+    my_ns:grossIncome "$5.72M" ;
+    my_ns:imdbMetascore "95" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "133,551" ;
+    schema:author "Billy Wilder" ;
+    schema:cinematographer "John F. Seitz" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1944-12-01"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Film-Noir" ;
+    schema:headline "DOUBLE IUDEMNITY " ;
+    schema:producer "B. G. DeSylva" ;
+    schema:productionCompany my_ns:company_0000056 .
+
+<https://www.imdb.com/title/tt0036868/> a my_ns:Movie ;
+    my_ns:grossIncome "$23.65M" ;
+    my_ns:imdbMetascore "92" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "54,709" ;
+    schema:author "Robert E. Sherwood" ;
+    schema:cinematographer "Gregg Toland" ;
+    schema:contentRating "Approved" ;
+    schema:datePublished "1946-02-09"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Drama, Romance, War" ;
+    schema:headline "THE BEST YEARS OF OUR LIVES " ;
+    schema:producer "Samuel Goldwyn" ;
+    schema:productionCompany my_ns:company_0000062 .
+
+<https://www.imdb.com/title/tt0037008/> a my_ns:Movie ;
+    my_ns:grossIncome "$4.36M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "39,953" ;
+    schema:author "Jay Dratler" ;
+    schema:cinematographer "Lucien Ballard" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1944-02-09"^^xsd:date ;
+    schema:duration "88 min"^^xsd:time ;
+    schema:genre "Drama, Film-Noir, Mystery" ;
+    schema:headline "LAURA" ;
+    schema:producer "Otto Preminger" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0038650/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "89" ;
+    my_ns:imdbRating "8.6" ;
+    my_ns:imdbVotes "375,128" ;
+    schema:author "None" ;
+    schema:cinematographer "Victor Milner" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1947-02-04"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Family, Fantasy" ;
+    schema:headline "IT'S A WONDERFUL LIFE" ;
+    schema:producer "Frank Capra" ;
+    schema:productionCompany my_ns:company_0000039 .
+
+<https://www.imdb.com/title/tt0038787/> a my_ns:Movie ;
+    my_ns:grossIncome "$10.46M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "87,402" ;
+    schema:author "None" ;
+    schema:cinematographer "Ted Tetzlaff" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1946-11-06"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Drama, Film-Noir, Romance" ;
+    schema:headline "NOTORIOUS" ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000061 .
+
+<https://www.imdb.com/title/tt0039628/> a my_ns:Movie ;
+    my_ns:grossIncome "$2.65M" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "38,439" ;
+    schema:author "None" ;
+    schema:cinematographer "Charles G. Clarke" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1947-08-01"^^xsd:date ;
+    schema:duration "96 min"^^xsd:time ;
+    schema:genre "Comedy, Drama, Family" ;
+    schema:headline "MIZACLE ON 3ATH STREET " ;
+    schema:producer "William Perlberg" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0040897/> a my_ns:Movie ;
+    my_ns:grossIncome "$5.01M" ;
+    my_ns:imdbMetascore "98" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "107,265" ;
+    schema:author "John Huston" ;
+    schema:cinematographer "Ted McCord" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1948-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, Western" ;
+    schema:headline "THE TREASURE YF THE SIERRAJMADRE " ;
+    schema:producer "Jack L. Warner" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0041959/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.45M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "150,114" ;
+    schema:author "Graham Greene" ;
+    schema:cinematographer "Robert Krasker" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1950-02-09"^^xsd:date ;
+    schema:duration "93 min"^^xsd:time ;
+    schema:genre "Film-Noir, Mystery, Thriller" ;
+    schema:headline "THE THIRD MAN" ;
+    schema:producer "Carol Reed" ;
+    schema:productionCompany my_ns:company_0000040 .
+
+<https://www.imdb.com/title/tt0042192/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.01M" ;
+    my_ns:imdbMetascore "98" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "113,397" ;
+    schema:author "None" ;
+    schema:cinematographer "Milton Krasner" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1950-06-18"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "ALL ABOUT EVE" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0043014/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "187,055" ;
+    schema:author "Charles Brackett" ;
+    schema:cinematographer "John F. Seitz" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1950-04-17"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama, Film-Noir" ;
+    schema:headline "SUNSET BLVD." ;
+    schema:producer "Charles Brackett" ;
+    schema:productionCompany my_ns:company_0000052 .
+
+<https://www.imdb.com/title/tt0043265/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.54M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "68,250" ;
+    schema:author "Peter Viertel" ;
+    schema:cinematographer "Jack Cardiff" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1952-02-03"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, Romance" ;
+    schema:headline "AFRICAN QUEEN, THE" ;
+    schema:producer "Sam Spiegel" ;
+    schema:productionCompany my_ns:company_0000028 .
+
+<https://www.imdb.com/title/tt0043456/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "73,905" ;
+    schema:author "Edmund H. North" ;
+    schema:cinematographer "Leo Tover" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1951-11-02"^^xsd:date ;
+    schema:duration "92 min"^^xsd:time ;
+    schema:genre "Drama, Sci-Fi" ;
+    schema:headline "THE DAY WHO EARTH STOOD STILL" ;
+    schema:producer "Julian Blaustein" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0044079/> a my_ns:Movie ;
+    my_ns:grossIncome "$7.63M" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "117,307" ;
+    schema:author "Czenzi Ormonde" ;
+    schema:cinematographer "Robert Burks" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1951-01-19"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Crime, Film-Noir, Thriller" ;
+    schema:headline "STRANGERS ON A TRAIN" ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0044081/> a my_ns:Movie ;
+    my_ns:grossIncome "$8.00M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "94,070" ;
+    schema:author "Tennessee Williams" ;
+    schema:cinematographer "Harry Stradling" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1952-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "STREETCAR NAMED DESIRE , A" ;
+    schema:producer "Charles K. Feldman" ;
+    schema:productionCompany my_ns:company_0000091 .
+
+<https://www.imdb.com/title/tt0044706/> a my_ns:Movie ;
+    my_ns:grossIncome "$9.45M" ;
+    my_ns:imdbMetascore "89" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "92,902" ;
+    schema:author "Carl Foreman" ;
+    schema:cinematographer "Floyd Crosby" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1952-02-09"^^xsd:date ;
+    schema:duration "85 min"^^xsd:time ;
+    schema:genre "Drama, Thriller, Western" ;
+    schema:headline "HIGH NOON " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000065 .
+
+<https://www.imdb.com/title/tt0045152/> a my_ns:Movie ;
+    my_ns:grossIncome "$8.82M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "205,037" ;
+    schema:author "Adolph Green" ;
+    schema:cinematographer "Harold Rosson" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1952-02-14"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Comedy, Musical, Romance" ;
+    schema:headline "SINGIN' IN THE RAIN " ;
+    schema:producer "Arthur Freed" ;
+    schema:productionCompany my_ns:company_0000046 .
+
+<https://www.imdb.com/title/tt0046303/> a my_ns:Movie ;
+    my_ns:grossIncome "$20.00M" ;
+    my_ns:imdbMetascore "80" ;
+    my_ns:imdbRating "7.6" ;
+    my_ns:imdbVotes "34,677" ;
+    schema:author "A. B. Guthrie Jr." ;
+    schema:cinematographer "Loyal Griggs" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1953-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama, Western" ;
+    schema:headline "SHANE" ;
+    schema:producer "George Stevens" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0046912/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.01M" ;
+    my_ns:imdbMetascore "75" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "146,025" ;
+    schema:author "Frederick Knott" ;
+    schema:cinematographer "Robert Burks" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1954-05-31"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Crime, Thriller" ;
+    schema:headline "DIAL M FOR MURDER" ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0047296/> a my_ns:Movie ;
+    my_ns:grossIncome "$9.60M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "133,176" ;
+    schema:author "Budd Schulberg" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1954-06-30"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Thriller" ;
+    schema:headline "ON THE WATEYFRODT" ;
+    schema:producer "Sam Spiegel" ;
+    schema:productionCompany my_ns:company_0000031 .
+
+<https://www.imdb.com/title/tt0047396/> a my_ns:Movie ;
+    my_ns:grossIncome "$36.76M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "415,126" ;
+    schema:author "John Michael Hayes" ;
+    schema:cinematographer "Robert Burks" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1954-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Mystery, Thriller" ;
+    schema:headline "REAR WINDOW " ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000055 .
+
+<https://www.imdb.com/title/tt0048424/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.65M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "77,342" ;
+    schema:author "James Agee" ;
+    schema:cinematographer "Stanley Cortez" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1955-02-09"^^xsd:date ;
+    schema:duration "92 min"^^xsd:time ;
+    schema:genre "Crime, Drama, Film-Noir" ;
+    schema:headline "NIGHT OF THE HUNTER, THE" ;
+    schema:producer "Paul Gregory" ;
+    schema:productionCompany my_ns:company_0000059 .
+
+<https://www.imdb.com/title/tt0048545/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "78,724" ;
+    schema:author "Stewart Stern" ;
+    schema:cinematographer "Ernest Haller" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1955-11-24"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "REBEL WITHOET A CAUSE " ;
+    schema:producer "David Weisbart" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0049366/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "92" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "42,421" ;
+    schema:author "Daniel Mainwaring" ;
+    schema:cinematographer "Ellsworth Fredericks" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1956-02-09"^^xsd:date ;
+    schema:duration "80 min"^^xsd:time ;
+    schema:genre "Drama, Horror, Sci-Fi" ;
+    schema:headline "INVASION OF THE BODY SNATCHERS" ;
+    schema:producer "Walter Wanger" ;
+    schema:productionCompany my_ns:company_0000088 .
+
+<https://www.imdb.com/title/tt0049730/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "75,503" ;
+    schema:author "Frank S. Nugent" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Passed" ;
+    schema:datePublished "1956-11-03"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, Western" ;
+    schema:headline "THE SEARCHCRS " ;
+    schema:producer "Merian C. Cooper" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0050083/> a my_ns:Movie ;
+    my_ns:grossIncome "$4.36M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8.9" ;
+    my_ns:imdbVotes "636,786" ;
+    schema:author "Reginald Rose" ;
+    schema:cinematographer "Boris Kaufman" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1957-02-09"^^xsd:date ;
+    schema:duration "96 min"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "12 ANGRY MEN" ;
+    schema:producer "Reginald Rose" ;
+    schema:productionCompany my_ns:company_0000050 .
+
+<https://www.imdb.com/title/tt0050212/> a my_ns:Movie ;
+    my_ns:grossIncome "$44.91M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "192,068" ;
+    schema:author "Pierre Boulle" ;
+    schema:cinematographer "Jack Hildyard" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1957-02-09"^^xsd:date ;
+    schema:duration "16:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, War" ;
+    schema:headline "THE BRIDOE ON THE RIVER KWAIN" ;
+    schema:producer "Sam Spiegel" ;
+    schema:productionCompany my_ns:company_0000030 .
+
+<https://www.imdb.com/title/tt0052311/> a my_ns:Movie ;
+    my_ns:grossIncome "$2.24M" ;
+    my_ns:imdbMetascore "99" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "94,613" ;
+    schema:author "Orson Welles" ;
+    schema:cinematographer "Russell Metty" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1958-02-09"^^xsd:date ;
+    schema:duration "95 min"^^xsd:time ;
+    schema:genre "Crime, Drama, Film-Noir" ;
+    schema:headline "TOUCH OF EVIL" ;
+    schema:producer "Albert Zugsmith" ;
+    schema:productionCompany my_ns:company_0000085 .
+
+<https://www.imdb.com/title/tt0052357/> a my_ns:Movie ;
+    my_ns:grossIncome "$3.20M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "335,446" ;
+    schema:author "Alec Coppel" ;
+    schema:cinematographer "Robert Burks" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1958-05-31"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Mystery, Romance, Thriller" ;
+    schema:headline "VERTIGO " ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000001 .
+
+<https://www.imdb.com/title/tt0052618/> a my_ns:Movie ;
+    my_ns:grossIncome "$74.70M" ;
+    my_ns:imdbMetascore "90" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "207,760" ;
+    schema:author "Karl Tunberg" ;
+    schema:cinematographer "Robert L. Surtees" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1959-11-03"^^xsd:date ;
+    schema:duration "21:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, History" ;
+    schema:headline "BEN-HUR" ;
+    schema:producer "Sam Zimbalist" ;
+    schema:productionCompany my_ns:company_0000046 .
+
+<https://www.imdb.com/title/tt0053291/> a my_ns:Movie ;
+    my_ns:grossIncome "$25.00M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "229,204" ;
+    schema:author "Billy Wilder" ;
+    schema:cinematographer "Charles Lang Jr." ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1959-01-01"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Comedy, Music, Romance" ;
+    schema:headline "SOME LZKE ITVHOT" ;
+    schema:producer "Billy Wilder" ;
+    schema:productionCompany my_ns:company_0000073 .
+
+<https://www.imdb.com/title/tt0053604/> a my_ns:Movie ;
+    my_ns:grossIncome "$18.60M" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "151,234" ;
+    schema:author "Billy Wilder" ;
+    schema:cinematographer "Joseph La Shelle" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1960-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "APARTMENT , THE" ;
+    schema:producer "Billy Wilder" ;
+    schema:productionCompany my_ns:company_0000071 .
+
+<https://www.imdb.com/title/tt0054215/> a my_ns:Movie ;
+    my_ns:grossIncome "$32.00M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "561,998" ;
+    schema:author "Joseph Stefano" ;
+    schema:cinematographer "John L. Russell" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1960-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Horror, Mystery, Thriller" ;
+    schema:headline "PSYCHO" ;
+    schema:producer "Alfred Hitchcock" ;
+    schema:productionCompany my_ns:company_0000064 .
+
+<https://www.imdb.com/title/tt0054331/> a my_ns:Movie ;
+    my_ns:grossIncome "$30.00M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "116,986" ;
+    schema:author "Dalton Trumbo" ;
+    schema:cinematographer "Russell Metty" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1960-02-09"^^xsd:date ;
+    schema:duration "19:00:00"^^xsd:time ;
+    schema:genre "Adventure, Biography, Drama" ;
+    schema:headline "SPARTACUS" ;
+    schema:producer "Kirk Douglas" ;
+    schema:productionCompany my_ns:company_0000086 .
+
+<https://www.imdb.com/title/tt0055614/> a my_ns:Movie ;
+    my_ns:grossIncome "$43.66M" ;
+    my_ns:imdbMetascore "86" ;
+    my_ns:imdbRating "7.5" ;
+    my_ns:imdbVotes "90,967" ;
+    schema:author "Ernest Lehman" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1961-06-10"^^xsd:date ;
+    schema:duration "15:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Musical" ;
+    schema:headline "WEST SIDB STORW " ;
+    schema:producer "Robert Wise" ;
+    schema:productionCompany my_ns:company_0000007 .
+
+<https://www.imdb.com/title/tt0056172/> a my_ns:Movie ;
+    my_ns:grossIncome "$44.82M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "251,832" ;
+    schema:author "Robert Bolt" ;
+    schema:cinematographer "F. A. Young" ;
+    schema:contentRating "Approved" ;
+    schema:datePublished "1962-02-09"^^xsd:date ;
+    schema:duration "22:00:00"^^xsd:time ;
+    schema:genre "Adventure, Biography, Drama" ;
+    schema:headline "LAWRENCE OF ARABIA" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000029 .
+
+<https://www.imdb.com/title/tt0056592/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "280,719" ;
+    schema:author "Horton Foote" ;
+    schema:cinematographer "Russell Harlan" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1962-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama" ;
+    schema:headline "TO KILL A MOCKINGBIRD" ;
+    schema:producer "Alan J. Pakula" ;
+    schema:productionCompany my_ns:company_0000051 .
+
+<https://www.imdb.com/title/tt0056687/> a my_ns:Movie ;
+    my_ns:grossIncome "$4.05M" ;
+    my_ns:imdbMetascore "75" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "46,915" ;
+    schema:author "Lukas Heller" ;
+    schema:cinematographer "Ernest Haller" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1962-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Horror, Thriller" ;
+    schema:headline "WHAT EVER HAPPENED TJABABY JANE?" ;
+    schema:producer "Robert Aldrich" ;
+    schema:productionCompany my_ns:company_0000006 .
+
+<https://www.imdb.com/title/tt0057012/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.28M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "427,781" ;
+    schema:author "Stanley Kubrick" ;
+    schema:cinematographer "Gilbert Taylor" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1964-02-09"^^xsd:date ;
+    schema:duration "95 min"^^xsd:time ;
+    schema:genre "Comedy" ;
+    schema:headline "DR. STRANGELOVE OR: HOWZI LEARNED OO STOP WORRYING AND LOVE THE BOMB" ;
+    schema:producer "Stanley Kubrick" ;
+    schema:productionCompany my_ns:company_0000023 .
+
+<https://www.imdb.com/title/tt0057115/> a my_ns:Movie ;
+    my_ns:grossIncome "$12.10M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "211,838" ;
+    schema:author "James Clavell" ;
+    schema:cinematographer "Daniel L. Fapp" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1963-12-29"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, History" ;
+    schema:headline "GREAT ESCAPE, THE" ;
+    schema:producer "John Sturges" ;
+    schema:productionCompany my_ns:company_0000072 .
+
+<https://www.imdb.com/title/tt0058150/> a my_ns:Movie ;
+    my_ns:grossIncome "$51.08M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "162,944" ;
+    schema:author "Richard Maibaum" ;
+    schema:cinematographer "Ted Moore" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1964-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Action, Adventure, Thriller" ;
+    schema:headline "GOLDFINGIR" ;
+    schema:producer "Harry Saltzman" ;
+    schema:productionCompany my_ns:company_0000016 .
+
+<https://www.imdb.com/title/tt0058385/> a my_ns:Movie ;
+    my_ns:grossIncome "$72.00M" ;
+    my_ns:imdbMetascore "95" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "82,211" ;
+    schema:author "Alan Jay Lerner" ;
+    schema:cinematographer "Harry Stradling" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1964-08-02"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Drama, Family, Musical" ;
+    schema:headline "GY FAIR LADY" ;
+    schema:producer "Jack L. Warner" ;
+    schema:productionCompany my_ns:company_0000090 .
+
+<https://www.imdb.com/title/tt0059113/> a my_ns:Movie ;
+    my_ns:grossIncome "$111.72M" ;
+    my_ns:imdbMetascore "69" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "66,272" ;
+    schema:author "Robert Bolt" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1965-01-18"^^xsd:date ;
+    schema:duration "19:00:00"^^xsd:time ;
+    schema:genre "Drama, Romance, War" ;
+    schema:headline "DOCIOR ZHIVAGO " ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000010 .
+
+<https://www.imdb.com/title/tt0059742/> a my_ns:Movie ;
+    my_ns:grossIncome "$163.21M" ;
+    my_ns:imdbMetascore "63" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "191,841" ;
+    schema:author "Ernest Lehman" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1965-02-09"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, Family" ;
+    schema:headline "THE SOUND OF MUSVC " ;
+    schema:producer "Robert Wise" ;
+    schema:productionCompany my_ns:company_0000005 .
+
+<https://www.imdb.com/title/tt0061418/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "86" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "97,235" ;
+    schema:author "David Newman" ;
+    schema:cinematographer "Burnett Guffey" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1967-06-02"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Action, Biography, Crime" ;
+    schema:headline "BANNIE AND CLYDE" ;
+    schema:producer "Warren Beatty" ;
+    schema:productionCompany my_ns:company_0000068 .
+
+<https://www.imdb.com/title/tt0061512/> a my_ns:Movie ;
+    my_ns:grossIncome "$16.22M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "153,448" ;
+    schema:author "Frank Pierson" ;
+    schema:cinematographer "Conrad Hall" ;
+    schema:contentRating "GP" ;
+    schema:datePublished "1967-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama" ;
+    schema:headline "COOG HAND LUKE" ;
+    schema:producer "Gordon Carroll" ;
+    schema:productionCompany my_ns:company_0000036 .
+
+<https://www.imdb.com/title/tt0061722/> a my_ns:Movie ;
+    my_ns:grossIncome "$104.95M" ;
+    my_ns:imdbMetascore "83" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "243,777" ;
+    schema:author "Calder Willingham" ;
+    schema:cinematographer "Robert Surtees" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1967-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "GRADUATE, THE" ;
+    schema:producer "Lawrence Turman" ;
+    schema:productionCompany my_ns:company_0000038 .
+
+<https://www.imdb.com/title/tt0061811/> a my_ns:Movie ;
+    my_ns:grossIncome "$24.38M" ;
+    my_ns:imdbMetascore "75" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "62,797" ;
+    schema:author "None" ;
+    schema:cinematographer "Haskell Wexler" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1967-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Mystery" ;
+    schema:headline "IN THE HEAT OF THE NIGHT" ;
+    schema:producer "Walter Mirisch" ;
+    schema:productionCompany my_ns:company_0000074 .
+
+<https://www.imdb.com/title/tt0062622/> a my_ns:Movie ;
+    my_ns:grossIncome "$56.95M" ;
+    my_ns:imdbMetascore "82" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "565,201" ;
+    schema:author "Stanley Kubrick" ;
+    schema:cinematographer "Geoffrey Unsworth" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1968-05-14"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Adventure, Sci-Fi" ;
+    schema:headline "2001: A SPACE ODYSSEY" ;
+    schema:producer "Stanley Kubrick" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0063350/> a my_ns:Movie ;
+    my_ns:grossIncome "$0.09M" ;
+    my_ns:imdbMetascore "89" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "109,239" ;
+    schema:author "George A. Romero" ;
+    schema:cinematographer "George A. Romero" ;
+    schema:contentRating "Not Rated" ;
+    schema:datePublished "1968-09-28"^^xsd:date ;
+    schema:duration "96 min"^^xsd:time ;
+    schema:genre "Horror" ;
+    schema:headline "NIGHT OF THE LIVING DEAD" ;
+    schema:producer "Russell Streiner" ;
+    schema:productionCompany my_ns:company_0000034 .
+
+<https://www.imdb.com/title/tt0063442/> a my_ns:Movie ;
+    my_ns:grossIncome "$33.40M" ;
+    my_ns:imdbMetascore "79" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "159,256" ;
+    schema:author "Michael Wilson" ;
+    schema:cinematographer "Leon Shamroy" ;
+    schema:contentRating "G" ;
+    schema:datePublished "1968-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Adventure, Sci-Fi" ;
+    schema:headline "PLANET OF THE APES" ;
+    schema:producer "Arthur P. Jacobs" ;
+    schema:productionCompany my_ns:company_0000004 .
+
+<https://www.imdb.com/title/tt0063522/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "178,963" ;
+    schema:author "Roman Polanski" ;
+    schema:cinematographer "William Fraker" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1968-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Horror" ;
+    schema:headline "ROSEMARY'S BABY" ;
+    schema:producer "William Castle" ;
+    schema:productionCompany my_ns:company_0000093 .
+
+<https://www.imdb.com/title/tt0064115/> a my_ns:Movie ;
+    my_ns:grossIncome "$102.31M" ;
+    my_ns:imdbMetascore "66" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "193,261" ;
+    schema:author "None" ;
+    schema:cinematographer "Conrad Hall" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1969-06-23"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Biography, Crime, Drama" ;
+    schema:headline "BUTCH CASSIDY AND THE SUNDANCE KID " ;
+    schema:producer "John Foreman" ;
+    schema:productionCompany my_ns:company_0000009 .
+
+<https://www.imdb.com/title/tt0064276/> a my_ns:Movie ;
+    my_ns:grossIncome "$41.73M" ;
+    my_ns:imdbMetascore "86" ;
+    my_ns:imdbRating "7.3" ;
+    my_ns:imdbVotes "93,706" ;
+    schema:author "Peter Fonda" ;
+    schema:cinematographer "Laszlo Kovacs" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1969-10-30"^^xsd:date ;
+    schema:duration "95 min"^^xsd:time ;
+    schema:genre "Adventure, Drama" ;
+    schema:headline "EASY RIDER " ;
+    schema:producer "Peter Fonda" ;
+    schema:productionCompany my_ns:company_0000075 .
+
+<https://www.imdb.com/title/tt0064665/> a my_ns:Movie ;
+    my_ns:grossIncome "$44.79M" ;
+    my_ns:imdbMetascore "79" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "94,578" ;
+    schema:author "Waldo Salt" ;
+    schema:cinematographer "Adam Holender" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1969-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "MQDNIGHT COWBOY " ;
+    schema:producer "Jerome Hellman" ;
+    schema:productionCompany my_ns:company_0000037 .
+
+<https://www.imdb.com/title/tt0065214/> a my_ns:Movie ;
+    my_ns:grossIncome "$12.06M" ;
+    my_ns:imdbMetascore "95" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "74,066" ;
+    schema:author "Walon Green" ;
+    schema:cinematographer "Lucien Ballard" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1969-01-04"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Action, Adventure, Western" ;
+    schema:headline "THE WILD BUNCH" ;
+    schema:producer "Phil Feldman" ;
+    schema:productionCompany my_ns:company_0000060 .
+
+<https://www.imdb.com/title/tt0066206/> a my_ns:Movie ;
+    my_ns:grossIncome "$61.70M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "90,199" ;
+    schema:author "Francis Ford Coppola" ;
+    schema:cinematographer "Fred Koenekamp" ;
+    schema:contentRating "GP" ;
+    schema:datePublished "1970-10-14"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, War" ;
+    schema:headline "PZTTON " ;
+    schema:producer "Frank McCarthy" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0066921/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "80" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "715,439" ;
+    schema:author "None" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1971-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Sci-Fi" ;
+    schema:headline "A CLOCKWOLK ORANGE" ;
+    schema:producer "Stanley Kubrick" ;
+    schema:productionCompany my_ns:company_0000024 .
+
+<https://www.imdb.com/title/tt0067116/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "7.7" ;
+    my_ns:imdbVotes "102,993" ;
+    schema:author "Ernest Tidyman" ;
+    schema:cinematographer "Owen Roizman" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1971-01-03"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Action, Crime, Drama" ;
+    schema:headline "THE FRENCH CONNECTION " ;
+    schema:producer "G. David Schine" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0067185/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "62" ;
+    my_ns:imdbRating "7.9" ;
+    my_ns:imdbVotes "67,318" ;
+    schema:author "Colin Higgins" ;
+    schema:cinematographer "John Alonzo" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1971-02-09"^^xsd:date ;
+    schema:duration "91 min"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "HAROLD AND MAUDE" ;
+    schema:producer "Mildred Lewis" ;
+    schema:productionCompany my_ns:company_0000054 .
+
+<https://www.imdb.com/title/tt0068646/> a my_ns:Movie ;
+    my_ns:grossIncome "$134.97M" ;
+    my_ns:imdbMetascore "100" ;
+    my_ns:imdbRating "9.2" ;
+    my_ns:imdbVotes "1,505,379" ;
+    schema:author "Mario Puzo" ;
+    schema:cinematographer "Gordon Willis" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1972-11-17"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama" ;
+    schema:headline "GODFATHER, THE" ;
+    schema:producer "Albert S. Ruddy" ;
+    schema:productionCompany my_ns:company_0000053 .
+
+<https://www.imdb.com/title/tt0069704/> a my_ns:Movie ;
+    my_ns:grossIncome "$115.00M" ;
+    my_ns:imdbMetascore "97" ;
+    my_ns:imdbRating "7.4" ;
+    my_ns:imdbVotes "77,156" ;
+    schema:author "George Lucas" ;
+    schema:cinematographer "Ron Eveslage" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1973-11-19"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama" ;
+    schema:headline "AMERICAN GROFFITI " ;
+    schema:producer "Francis Ford Coppola" ;
+    schema:productionCompany my_ns:company_0000042 .
+
+<https://www.imdb.com/title/tt0070047/> a my_ns:Movie ;
+    my_ns:grossIncome "$232.91M" ;
+    my_ns:imdbMetascore "81" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "345,027" ;
+    schema:author "William Peter Blatty" ;
+    schema:cinematographer "Owen Roizman" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1973-10-12"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Horror" ;
+    schema:headline "EXORCIST, THE" ;
+    schema:producer "William Peter Blatty" ;
+    schema:productionCompany my_ns:company_0000032 .
+
+<https://www.imdb.com/title/tt0071315/> a my_ns:Movie ;
+    my_ns:grossIncome "$29.20M" ;
+    my_ns:imdbMetascore "92" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "275,688" ;
+    schema:author "Robert Towne" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1974-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery, Thriller" ;
+    schema:headline "CHINATOWN" ;
+    schema:producer "Robert Evans" ;
+    schema:productionCompany my_ns:company_0000041 .
+
+<https://www.imdb.com/title/tt0071562/> a my_ns:Movie ;
+    my_ns:grossIncome "$57.30M" ;
+    my_ns:imdbMetascore "90" ;
+    my_ns:imdbRating "9" ;
+    my_ns:imdbVotes "1,054,256" ;
+    schema:author "Francis Ford Coppola" ;
+    schema:cinematographer "Gordon Willis" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1974-04-27"^^xsd:date ;
+    schema:duration "20:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama" ;
+    schema:headline "THE GODFATHER PART II " ;
+    schema:producer "Francis Ford Coppola" ;
+    schema:productionCompany my_ns:company_0000069 .
+
+<https://www.imdb.com/title/tt0073195/> a my_ns:Movie ;
+    my_ns:grossIncome "$260.00M" ;
+    my_ns:imdbMetascore "87" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "522,394" ;
+    schema:author "Peter Benchley" ;
+    schema:cinematographer "Bill Butler" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1975-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, Thriller" ;
+    schema:headline "CAWS" ;
+    schema:producer "Richard D. Zanuck" ;
+    schema:productionCompany my_ns:company_0000083 .
+
+<https://www.imdb.com/title/tt0073486/> a my_ns:Movie ;
+    my_ns:grossIncome "$112.00M" ;
+    my_ns:imdbMetascore "83" ;
+    my_ns:imdbRating "8.7" ;
+    my_ns:imdbVotes "861,875" ;
+    schema:author "Bo Goldman" ;
+    schema:cinematographer "Haskell Wexler" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1975-03-03"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "ONE FLEW OVER TTE CUCKOO'E NEST " ;
+    schema:producer "Saul Zaentz" ;
+    schema:productionCompany my_ns:company_0000020 .
+
+<https://www.imdb.com/title/tt0074119/> a my_ns:Movie ;
+    my_ns:grossIncome "$70.60M" ;
+    my_ns:imdbMetascore "80" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "96,018" ;
+    schema:author "William Goldman" ;
+    schema:cinematographer "Gordon Willis" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1976-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, History" ;
+    schema:headline "ALL THE PRESIDENT'S MCN " ;
+    schema:producer "Walter Coblenz" ;
+    schema:productionCompany my_ns:company_0000092 .
+
+<https://www.imdb.com/title/tt0074958/> a my_ns:Movie ;
+    my_ns:grossIncome "None" ;
+    my_ns:imdbMetascore "83" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "136,349" ;
+    schema:author "None" ;
+    schema:cinematographer "Owen Roizman" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1976-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "NETBORK" ;
+    schema:producer "Howard Gottfried" ;
+    schema:productionCompany my_ns:company_0000047 .
+
+<https://www.imdb.com/title/tt0075148/> a my_ns:Movie ;
+    my_ns:grossIncome "$117.24M" ;
+    my_ns:imdbMetascore "70" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "489,850" ;
+    schema:author "Sylvester Stallone" ;
+    schema:cinematographer "James Crabe" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1976-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama, Sport" ;
+    schema:headline "RVCKY" ;
+    schema:producer "Irwin Winkler" ;
+    schema:productionCompany my_ns:company_0000013 .
+
+<https://www.imdb.com/title/tt0075686/> a my_ns:Movie ;
+    my_ns:grossIncome "$39.20M" ;
+    my_ns:imdbMetascore "92" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "241,870" ;
+    schema:author "None" ;
+    schema:cinematographer "Gordon Willis , A.S.C." ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1977-02-09"^^xsd:date ;
+    schema:duration "93 min"^^xsd:time ;
+    schema:genre "Comedy, Romance" ;
+    schema:headline "ANNIE HALL " ;
+    schema:producer "Charles H. Joffe" ;
+    schema:productionCompany my_ns:company_0000080 .
+
+<https://www.imdb.com/title/tt0075860/> a my_ns:Movie ;
+    my_ns:grossIncome "$132.09M" ;
+    my_ns:imdbMetascore "90" ;
+    my_ns:imdbRating "7.6" ;
+    my_ns:imdbVotes "173,256" ;
+    schema:author "Steven Spielberg" ;
+    schema:cinematographer "William Fraker" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1977-03-18"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Sci-Fi" ;
+    schema:headline "CLOSE ENCOUNTERS OF THE THIRD KIND " ;
+    schema:producer "Julia Phillips" ;
+    schema:productionCompany my_ns:company_0000015 .
+
+<https://www.imdb.com/title/tt0077416/> a my_ns:Movie ;
+    my_ns:grossIncome "$48.98M" ;
+    my_ns:imdbMetascore "86" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "293,816" ;
+    schema:author "None" ;
+    schema:cinematographer "Vilmos Zsigmond" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1978-02-09"^^xsd:date ;
+    schema:duration "18:00:00"^^xsd:time ;
+    schema:genre "Drama, War" ;
+    schema:headline "DEER HUNTER , THE" ;
+    schema:producer "Barry Spikings" ;
+    schema:productionCompany my_ns:company_0000018 .
+
+<https://www.imdb.com/title/tt0077651/> a my_ns:Movie ;
+    my_ns:grossIncome "$47.00M" ;
+    my_ns:imdbMetascore "81" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "215,709" ;
+    schema:author "John Carpenter" ;
+    schema:cinematographer "Dean Cundey" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1978-01-30"^^xsd:date ;
+    schema:duration "91 min"^^xsd:time ;
+    schema:genre "Horror, Thriller" ;
+    schema:headline "HALLOWEEN" ;
+    schema:producer "Debra Hill" ;
+    schema:productionCompany my_ns:company_0000019 .
+
+<https://www.imdb.com/title/tt0078748/> a my_ns:Movie ;
+    my_ns:grossIncome "$78.90M" ;
+    my_ns:imdbMetascore "89" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "742,097" ;
+    schema:author "Dan O'Bannon" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1979-01-03"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Horror, Sci-Fi" ;
+    schema:headline "ALIEN" ;
+    schema:producer "Gordon Carroll" ;
+    schema:productionCompany my_ns:company_0000079 .
+
+<https://www.imdb.com/title/tt0078788/> a my_ns:Movie ;
+    my_ns:grossIncome "$83.47M" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "569,936" ;
+    schema:author "Francis Ford Coppola" ;
+    schema:cinematographer "Vittorio Storaro" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1979-09-17"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery, War" ;
+    schema:headline "APOCALYPSERNOW" ;
+    schema:producer "Francis Ford Coppola" ;
+    schema:productionCompany my_ns:company_0000049 .
+
+<https://www.imdb.com/title/tt0081398/> a my_ns:Movie ;
+    my_ns:grossIncome "$23.38M" ;
+    my_ns:imdbMetascore "89" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "301,353" ;
+    schema:author "Paul Schrader" ;
+    schema:cinematographer "Michael Chapman" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1980-02-22"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, Sport" ;
+    schema:headline "RAGING BULL" ;
+    schema:producer "Irwin Winkler" ;
+    schema:productionCompany my_ns:company_0000013 .
+
+<https://www.imdb.com/title/tt0081505/> a my_ns:Movie ;
+    my_ns:grossIncome "$44.02M" ;
+    my_ns:imdbMetascore "66" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "830,573" ;
+    schema:author "Stanley Kubrick" ;
+    schema:cinematographer "John Alcott" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1980-02-09"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Drama, Horror" ;
+    schema:headline "THE SHINING" ;
+    schema:producer "Stanley Kubrick" ;
+    schema:productionCompany my_ns:company_0000022 .
+
+<https://www.imdb.com/title/tt0082971/> a my_ns:Movie ;
+    my_ns:grossIncome "$248.16M" ;
+    my_ns:imdbMetascore "85" ;
+    my_ns:imdbRating "8.4" ;
+    my_ns:imdbVotes "839,197" ;
+    schema:author "Lawrence Kasdan" ;
+    schema:cinematographer "Douglas Slocombe" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1981-06-02"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Action, Adventure" ;
+    schema:headline "RAIDERS OF THE LOST ARK " ;
+    schema:producer "George Lucas" ;
+    schema:productionCompany my_ns:company_0000043 .
+
+<https://www.imdb.com/title/tt0083658/> a my_ns:Movie ;
+    my_ns:grossIncome "$32.87M" ;
+    my_ns:imdbMetascore "84" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "652,939" ;
+    schema:author "Hampton Fancher" ;
+    schema:cinematographer "Jordan Cronenweth" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1982-08-27"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Action, Sci-Fi, Thriller" ;
+    schema:headline "BLADE RUNNER" ;
+    schema:producer "Michael Deeley" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0083866/> a my_ns:Movie ;
+    my_ns:grossIncome "$435.11M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "350,201" ;
+    schema:author "Melissa Mathison" ;
+    schema:cinematographer "Allen Daviau" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1982-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Family, Sci-Fi" ;
+    schema:headline "E.T.: THE EXTRA-TERRESTRIAL " ;
+    schema:producer "Steven Spielberg" ;
+    schema:productionCompany my_ns:company_0000081 .
+
+<https://www.imdb.com/title/tt0084787/> a my_ns:Movie ;
+    my_ns:grossIncome "$13.78M" ;
+    my_ns:imdbMetascore "None" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "346,269" ;
+    schema:author "Charles Lederer" ;
+    schema:cinematographer "Russell Harlan" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1951-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Horror, Mystery, Sci-Fi" ;
+    schema:headline "THE TMING" ;
+    schema:producer "Howard Hawks" ;
+    schema:productionCompany my_ns:company_0000094 .
+
+<https://www.imdb.com/title/tt0084805/> a my_ns:Movie ;
+    my_ns:grossIncome "$177.20M" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "7.4" ;
+    my_ns:imdbVotes "91,976" ;
+    schema:author "Larry Gelbart" ;
+    schema:cinematographer "Owen Roizman" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1982-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama, Romance" ;
+    schema:headline "TOOTSRE " ;
+    schema:producer "Sydney Pollack" ;
+    schema:productionCompany my_ns:company_0000048 .
+
+<https://www.imdb.com/title/tt0086879/> a my_ns:Movie ;
+    my_ns:grossIncome "$51.97M" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "349,144" ;
+    schema:author "None" ;
+    schema:cinematographer "Miroslav Ondricek" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1984-05-26"^^xsd:date ;
+    schema:duration "16:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, History" ;
+    schema:headline "DMADEUS " ;
+    schema:producer "Saul Zaentz" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0088247/> a my_ns:Movie ;
+    my_ns:grossIncome "$38.40M" ;
+    my_ns:imdbMetascore "84" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "760,484" ;
+    schema:author "James Cameron" ;
+    schema:cinematographer "Adam Greenberg" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1984-01-01"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Action, Sci-Fi" ;
+    schema:headline "THE TERMINATLR" ;
+    schema:producer "Gale Anne Hurd" ;
+    schema:productionCompany my_ns:company_0000026 .
+
+<https://www.imdb.com/title/tt0089881/> a my_ns:Movie ;
+    my_ns:grossIncome "$3.52M" ;
+    my_ns:imdbMetascore "96" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "103,513" ;
+    schema:author "James L. White" ;
+    schema:cinematographer "Pawel Edelman" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1985-02-09"^^xsd:date ;
+    schema:duration "16:00:00"^^xsd:time ;
+    schema:genre "Action, Drama" ;
+    schema:headline "RAY" ;
+    schema:producer "Taylor Hackford" ;
+    schema:productionCompany my_ns:company_0000082 .
+
+<https://www.imdb.com/title/tt0090756/> a my_ns:Movie ;
+    my_ns:grossIncome "$8.55M" ;
+    my_ns:imdbMetascore "76" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "168,769" ;
+    schema:author "David Lynch" ;
+    schema:cinematographer "Frederick Elmes" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1986-09-03"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery, Thriller" ;
+    schema:headline "BLUE VOLVET" ;
+    schema:producer "Fred Caruso" ;
+    schema:productionCompany my_ns:company_0000008 .
+
+<https://www.imdb.com/title/tt0091763/> a my_ns:Movie ;
+    my_ns:grossIncome "$138.53M" ;
+    my_ns:imdbMetascore "92" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "362,386" ;
+    schema:author "Oliver Stone" ;
+    schema:cinematographer "Robert Richardson" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1986-06-10"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Drama, War" ;
+    schema:headline "PZATOON " ;
+    schema:producer "John Daly" ;
+    schema:productionCompany my_ns:company_0000025 .
+
+<https://www.imdb.com/title/tt0093058/> a my_ns:Movie ;
+    my_ns:grossIncome "$46.36M" ;
+    my_ns:imdbMetascore "76" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "634,506" ;
+    schema:author "Stanley Kubrick" ;
+    schema:cinematographer "Douglas Milsome" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1987-02-09"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Drama, War" ;
+    schema:headline "FULL METAL JACKET" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000021 .
+
+<https://www.imdb.com/title/tt0095016/> a my_ns:Movie ;
+    my_ns:grossIncome "$83.01M" ;
+    my_ns:imdbMetascore "72" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "747,190" ;
+    schema:author "Jeb Stuart" ;
+    schema:cinematographer "Jan de Bont" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1988-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Action, Thriller" ;
+    schema:headline "DIE HARD" ;
+    schema:producer "Lawrence Gordon" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0097165/> a my_ns:Movie ;
+    my_ns:grossIncome "$95.86M" ;
+    my_ns:imdbMetascore "79" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "389,721" ;
+    schema:author "Tom Schulman" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "PG" ;
+    schema:datePublished "1989-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Comedy, Drama" ;
+    schema:headline "DEADZPOETS LOCIETY" ;
+    schema:producer "Steven Haft" ;
+    schema:productionCompany my_ns:company_0000077 .
+
+<https://www.imdb.com/title/tt0099348/> a my_ns:Movie ;
+    my_ns:grossIncome "$184.21M" ;
+    my_ns:imdbMetascore "72" ;
+    my_ns:imdbRating "8" ;
+    my_ns:imdbVotes "227,730" ;
+    schema:author "Michael Blake" ;
+    schema:cinematographer "Dean Semler" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1990-01-14"^^xsd:date ;
+    schema:duration "18:00:00"^^xsd:time ;
+    schema:genre "Adventure, Drama, Western" ;
+    schema:headline "DANCES WITH WOLVES" ;
+    schema:producer "Jim Wilson" ;
+    schema:productionCompany my_ns:company_0000067 .
+
+<https://www.imdb.com/title/tt0099685/> a my_ns:Movie ;
+    my_ns:grossIncome "$46.84M" ;
+    my_ns:imdbMetascore "90" ;
+    my_ns:imdbRating "8.7" ;
+    my_ns:imdbVotes "949,991" ;
+    schema:author "Nicholas Pileggi" ;
+    schema:cinematographer "Michael Ballhaus" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1990-02-09"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Biography, Crime, Drama" ;
+    schema:headline "GOODFELLAS " ;
+    schema:producer "Irwin Winkler" ;
+    schema:productionCompany my_ns:company_0000035 .
+
+<https://www.imdb.com/title/tt0102926/> a my_ns:Movie ;
+    my_ns:grossIncome "$130.74M" ;
+    my_ns:imdbMetascore "85" ;
+    my_ns:imdbRating "8.6" ;
+    my_ns:imdbVotes "1,185,205" ;
+    schema:author "Ted Tally" ;
+    schema:cinematographer "Tak Fujimoto" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1991-01-17"^^xsd:date ;
+    schema:duration "11:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama, Thriller" ;
+    schema:headline "THE SILENCE OF THE LAMBS " ;
+    schema:producer "Edward Saxon" ;
+    schema:productionCompany my_ns:company_0000066 .
+
+<https://www.imdb.com/title/tt0103064/> a my_ns:Movie ;
+    my_ns:grossIncome "$204.84M" ;
+    my_ns:imdbMetascore "75" ;
+    my_ns:imdbRating "8.5" ;
+    my_ns:imdbVotes "945,655" ;
+    schema:author "James Cameron" ;
+    schema:cinematographer "Adam Greenberg" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1991-01-27"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Action, Sci-Fi" ;
+    schema:headline "TERMINATOR 2: JUDGMENT DAY" ;
+    schema:producer "Gale Anne Hurd" ;
+    schema:productionCompany "None" .
+
+<https://www.imdb.com/title/tt0103074/> a my_ns:Movie ;
+    my_ns:grossIncome "$45.36M" ;
+    my_ns:imdbMetascore "88" ;
+    my_ns:imdbRating "7.5" ;
+    my_ns:imdbVotes "126,867" ;
+    schema:author "Callie Khouri" ;
+    schema:cinematographer "Adrian Biddle" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1991-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Adventure, Crime, Drama" ;
+    schema:headline "THELMA & LOUISE" ;
+    schema:producer "Ridley Scott" ;
+    schema:productionCompany my_ns:company_0000058 .
+
+<https://www.imdb.com/title/tt0105695/> a my_ns:Movie ;
+    my_ns:grossIncome "$101.16M" ;
+    my_ns:imdbMetascore "85" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "353,543" ;
+    schema:author "David Webb Peoples" ;
+    schema:cinematographer "Jack N. Green" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1992-02-09"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Drama, Western" ;
+    schema:headline "UNFORGIVEN " ;
+    schema:producer "Clint Eastwood" ;
+    schema:productionCompany my_ns:company_0000070 .
+
+<https://www.imdb.com/title/tt0107290/> a my_ns:Movie ;
+    my_ns:grossIncome "$402.45M" ;
+    my_ns:imdbMetascore "68" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "811,979" ;
+    schema:author "Michael Crichton" ;
+    schema:cinematographer "None" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1993-02-09"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Action, Adventure, Sci-Fi" ;
+    schema:headline "JURASSIC PARK" ;
+    schema:producer "Kathleen Kennedy" ;
+    schema:productionCompany my_ns:company_0000002 .
+
+<https://www.imdb.com/title/tt0108052/> a my_ns:Movie ;
+    my_ns:grossIncome "$96.90M" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "8.9" ;
+    my_ns:imdbVotes "1,140,647" ;
+    schema:author "Steve Zaillian" ;
+    schema:cinematographer "Janusz Kaminski" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1993-03-09"^^xsd:date ;
+    schema:duration "19:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, History" ;
+    schema:headline "SCHINDLER'S LKST" ;
+    schema:producer "Steven Spielberg" ;
+    schema:productionCompany my_ns:company_0000002 .
+
+<https://www.imdb.com/title/tt0109830/> a my_ns:Movie ;
+    my_ns:grossIncome "$330.25M" ;
+    my_ns:imdbMetascore "82" ;
+    my_ns:imdbRating "8.8" ;
+    my_ns:imdbVotes "1,684,914" ;
+    schema:author "None" ;
+    schema:cinematographer "Don Burgess" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1994-01-06"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Drama, Romance" ;
+    schema:headline "FORREST GUMP" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000076 .
+
+<https://www.imdb.com/title/tt0110912/> a my_ns:Movie ;
+    my_ns:grossIncome "$107.93M" ;
+    my_ns:imdbMetascore "94" ;
+    my_ns:imdbRating "8.9" ;
+    my_ns:imdbVotes "1,716,682" ;
+    schema:author "Quentin Tarantino" ;
+    schema:cinematographer "Andrzej Sekula" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1994-02-09"^^xsd:date ;
+    schema:duration "15:00:00"^^xsd:time ;
+    schema:genre "Crime, Drama" ;
+    schema:headline "PULP FICTION " ;
+    schema:producer "Lawrence Bender" ;
+    schema:productionCompany my_ns:company_0000000 .
+
+<https://www.imdb.com/title/tt0111161/> a my_ns:Movie ;
+    my_ns:grossIncome "$28.34M" ;
+    my_ns:imdbMetascore "80" ;
+    my_ns:imdbRating "9.3" ;
+    my_ns:imdbVotes "2,185,132" ;
+    schema:author "Frank Darabont" ;
+    schema:cinematographer "Roger Deakins" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1994-02-09"^^xsd:date ;
+    schema:duration "14:00:00"^^xsd:time ;
+    schema:genre "Drama" ;
+    schema:headline "THT SHAWSHANK REDEEPTION " ;
+    schema:producer "Niki Marvin" ;
+    schema:productionCompany my_ns:company_0000011 .
+
+<https://www.imdb.com/title/tt0112573/> a my_ns:Movie ;
+    my_ns:grossIncome "$75.60M" ;
+    my_ns:imdbMetascore "68" ;
+    my_ns:imdbRating "8.3" ;
+    my_ns:imdbVotes "917,189" ;
+    schema:author "Randall Wallace" ;
+    schema:cinematographer "John Toll" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1995-02-07"^^xsd:date ;
+    schema:duration "17:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, History" ;
+    schema:headline "BRAVEHEART" ;
+    schema:producer "Mel Gibson" ;
+    schema:productionCompany my_ns:company_0000033 .
+
+<https://www.imdb.com/title/tt0116282/> a my_ns:Movie ;
+    my_ns:grossIncome "$24.61M" ;
+    my_ns:imdbMetascore "85" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "580,807" ;
+    schema:author "Ethan Coen" ;
+    schema:cinematographer "Roger Deakins" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1996-02-09"^^xsd:date ;
+    schema:duration "98 min"^^xsd:time ;
+    schema:genre "Crime, Drama, Thriller" ;
+    schema:headline "FARGO " ;
+    schema:producer "Ethan Coen" ;
+    schema:productionCompany my_ns:company_0000095 .
+
+<https://www.imdb.com/title/tt0120338/> a my_ns:Movie ;
+    my_ns:grossIncome "$659.33M" ;
+    my_ns:imdbMetascore "75" ;
+    my_ns:imdbRating "7.8" ;
+    my_ns:imdbVotes "990,618" ;
+    schema:author "James Cameron" ;
+    schema:cinematographer "Russell Carpenter" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1997-02-09"^^xsd:date ;
+    schema:duration "19:00:00"^^xsd:time ;
+    schema:genre "Drama, Romance" ;
+    schema:headline "TITANIC" ;
+    schema:producer "None" ;
+    schema:productionCompany my_ns:company_0000078 .
+
+<https://www.imdb.com/title/tt0120815/> a my_ns:Movie ;
+    my_ns:grossIncome "$216.54M" ;
+    my_ns:imdbMetascore "91" ;
+    my_ns:imdbRating "8.6" ;
+    my_ns:imdbVotes "1,158,586" ;
+    schema:author "Robert Rodat" ;
+    schema:cinematographer "Janusz Kaminski" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1998-02-09"^^xsd:date ;
+    schema:duration "16:00:00"^^xsd:time ;
+    schema:genre "Drama, War" ;
+    schema:headline "SAVINV PRIVATE RYBN " ;
+    schema:producer "Steven Spielberg" ;
+    schema:productionCompany my_ns:company_0000003 .
+
+<https://www.imdb.com/title/tt0133093/> a my_ns:Movie ;
+    my_ns:grossIncome "$171.48M" ;
+    my_ns:imdbMetascore "73" ;
+    my_ns:imdbRating "8.7" ;
+    my_ns:imdbVotes "1,573,397" ;
+    schema:author "Andy Wachowski" ;
+    schema:cinematographer "Bill Pope" ;
+    schema:contentRating "R" ;
+    schema:datePublished "1999-02-22"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Action, Sci-Fi" ;
+    schema:headline "THE KATRIX" ;
+    schema:producer "Joel Silver" ;
+    schema:productionCompany my_ns:company_0000044 .
+
+<https://www.imdb.com/title/tt0167404/> a my_ns:Movie ;
+    my_ns:grossIncome "$293.51M" ;
+    my_ns:imdbMetascore "64" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "869,410" ;
+    schema:author "M. Night Shyamalan" ;
+    schema:cinematographer "Tak Fujimoto" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "1999-02-09"^^xsd:date ;
+    schema:duration "10:00:00"^^xsd:time ;
+    schema:genre "Drama, Mystery, Thriller" ;
+    schema:headline "NHE SIXTH SENSE" ;
+    schema:producer "Frank Marshall" ;
+    schema:productionCompany my_ns:company_0000027 .
+
+<https://www.imdb.com/title/tt0268978/> a my_ns:Movie ;
+    my_ns:grossIncome "$170.74M" ;
+    my_ns:imdbMetascore "72" ;
+    my_ns:imdbRating "8.2" ;
+    my_ns:imdbVotes "798,847" ;
+    schema:author "Akiva Goldsman" ;
+    schema:cinematographer "Roger Deakins" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "2002-04-17"^^xsd:date ;
+    schema:duration "13:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama" ;
+    schema:headline "A BEAUTIFUL MIND" ;
+    schema:producer "Brian Grazer" ;
+    schema:productionCompany my_ns:company_0000017 .
+
+<https://www.imdb.com/title/tt0395169/> a my_ns:Movie ;
+    my_ns:grossIncome "$23.53M" ;
+    my_ns:imdbMetascore "79" ;
+    my_ns:imdbRating "8.1" ;
+    my_ns:imdbVotes "321,034" ;
+    schema:author "Keir Pearson" ;
+    schema:cinematographer "Robert Fraisse" ;
+    schema:contentRating "PG-13" ;
+    schema:datePublished "2004-02-16"^^xsd:date ;
+    schema:duration "12:00:00"^^xsd:time ;
+    schema:genre "Biography, Drama, History" ;
+    schema:headline "HOTEL OWANDA" ;
+    schema:producer "A. Kitman Ho" ;
+    schema:productionCompany "None" .
+
+my_ns:company_0000000 a my_ns:productionCompany ;
+    foaf:name "A Band Apart , Jersey Films" .
+
+my_ns:company_0000001 a my_ns:productionCompany ;
+    foaf:name "Alfred J. Hitchcock Productions, Inc., Paramount Pictures Corp." .
+
+my_ns:company_0000003 a my_ns:productionCompany ;
+    foaf:name "Amblin Entertainment , Mutual Film Company" .
+
+my_ns:company_0000004 a my_ns:productionCompany ;
+    foaf:name "Apjac Productions, Inc." .
+
+my_ns:company_0000005 a my_ns:productionCompany ;
+    foaf:name "Argyle Enterprises, Inc., Twentieth Century-Fox Film Corp." .
+
+my_ns:company_0000006 a my_ns:productionCompany ;
+    foaf:name "Associates & Aldrich Co., Inc." .
+
+my_ns:company_0000007 a my_ns:productionCompany ;
+    foaf:name "Beta Productions, The Mirisch Company, Inc., Seven Arts Productions, Inc., B & P Enterprises, Inc." .
+
+my_ns:company_0000008 a my_ns:productionCompany ;
+    foaf:name "Blue Velvet Productions" .
+
+my_ns:company_0000009 a my_ns:productionCompany ;
+    foaf:name "Campanile Productions, Inc." .
+
+my_ns:company_0000010 a my_ns:productionCompany ;
+    foaf:name "Carlo Ponti Productions" .
+
+my_ns:company_0000011 a my_ns:productionCompany ;
+    foaf:name "Castle Rock Entertainment" .
+
+my_ns:company_0000015 a my_ns:productionCompany ;
+    foaf:name "Columbia Pictures, EMI" .
+
+my_ns:company_0000016 a my_ns:productionCompany ;
+    foaf:name "Danjaq, S. A., Eon Productions, Ltd." .
+
+my_ns:company_0000017 a my_ns:productionCompany ;
+    foaf:name "DreamWorks Pictures, Imagine Entertainment , Universal Pictures" .
+
+my_ns:company_0000018 a my_ns:productionCompany ;
+    foaf:name "EMI" .
+
+my_ns:company_0000019 a my_ns:productionCompany ;
+    foaf:name "Falcon International Productions" .
+
+my_ns:company_0000020 a my_ns:productionCompany ;
+    foaf:name "Fantasy Films" .
+
+my_ns:company_0000021 a my_ns:productionCompany ;
+    foaf:name "Harrier Films, Natant Films, N.V., Warner Bros. Pictures" .
+
+my_ns:company_0000022 a my_ns:productionCompany ;
+    foaf:name "Hawk Films Ltd." .
+
+my_ns:company_0000023 a my_ns:productionCompany ;
+    foaf:name "Hawk Films, Ltd, Polaris Productions" .
+
+my_ns:company_0000024 a my_ns:productionCompany ;
+    foaf:name "Hawks Films Limited, Polaris Productions, Inc." .
+
+my_ns:company_0000025 a my_ns:productionCompany ;
+    foaf:name "Hemdale Film Corporation" .
+
+my_ns:company_0000026 a my_ns:productionCompany ;
+    foaf:name "Hemdale Productions" .
+
+my_ns:company_0000027 a my_ns:productionCompany ;
+    foaf:name "Hollywood Pictures , Spyglass Entertainment Group, LP, The Kennedy Marshall Company" .
+
+my_ns:company_0000028 a my_ns:productionCompany ;
+    foaf:name "Horizon Enterprises, Inc., Romulus Films, Ltd." .
+
+my_ns:company_0000029 a my_ns:productionCompany ;
+    foaf:name "Horizon Pictures (G.B.), Ltd." .
+
+my_ns:company_0000030 a my_ns:productionCompany ;
+    foaf:name "Horizon-American Pictures, Inc." .
+
+my_ns:company_0000031 a my_ns:productionCompany ;
+    foaf:name "Horizon-American Pictures, Inc.." .
+
+my_ns:company_0000032 a my_ns:productionCompany ;
+    foaf:name "Hoya Productions, Inc." .
+
+my_ns:company_0000033 a my_ns:productionCompany ;
+    foaf:name "Icon Productions , Ladd Company" .
+
+my_ns:company_0000034 a my_ns:productionCompany ;
+    foaf:name "Image Ten" .
+
+my_ns:company_0000035 a my_ns:productionCompany ;
+    foaf:name "Irwin Winkler Productions, Warner Bros. Pictures" .
+
+my_ns:company_0000036 a my_ns:productionCompany ;
+    foaf:name "Jalem Productions, Inc." .
+
+my_ns:company_0000037 a my_ns:productionCompany ;
+    foaf:name "Jerome Hellman Productions" .
+
+my_ns:company_0000038 a my_ns:productionCompany ;
+    foaf:name "Lawrence Turman, Inc." .
+
+my_ns:company_0000039 a my_ns:productionCompany ;
+    foaf:name "Liberty Films, Inc." .
+
+my_ns:company_0000040 a my_ns:productionCompany ;
+    foaf:name "London Film Productions, Ltd." .
+
+my_ns:company_0000041 a my_ns:productionCompany ;
+    foaf:name "Long Road Productions, Inc." .
+
+my_ns:company_0000042 a my_ns:productionCompany ;
+    foaf:name "Lucasfilm Ltd., Coppola Co." .
+
+my_ns:company_0000043 a my_ns:productionCompany ;
+    foaf:name "Lucasfilm, Ltd." .
+
+my_ns:company_0000044 a my_ns:productionCompany ;
+    foaf:name "Matrix Films Pty Ltd." .
+
+my_ns:company_0000045 a my_ns:productionCompany ;
+    foaf:name "Mercury Productions, Inc., RKO Radio Pictures, Inc." .
+
+my_ns:company_0000047 a my_ns:productionCompany ;
+    foaf:name "Metro-Goldwyn-Mayer, Inc." .
+
+my_ns:company_0000048 a my_ns:productionCompany ;
+    foaf:name "Mirage Enterprises, Punch Productions, Columbia Pictures, Delphi Productions" .
+
+my_ns:company_0000049 a my_ns:productionCompany ;
+    foaf:name "Omni Zoetrope" .
+
+my_ns:company_0000050 a my_ns:productionCompany ;
+    foaf:name "Orion-Nova Productions" .
+
+my_ns:company_0000051 a my_ns:productionCompany ;
+    foaf:name "Pakula-Mulligan Productions, Inc., Brentwood Productions, Inc." .
+
+my_ns:company_0000052 a my_ns:productionCompany ;
+    foaf:name "Paramount Pictures Corp." .
+
+my_ns:company_0000053 a my_ns:productionCompany ;
+    foaf:name "Paramount Pictures Corp., Alfran Productions, Inc." .
+
+my_ns:company_0000054 a my_ns:productionCompany ;
+    foaf:name "Paramount Pictures Corp., Mildred Lewis & Colin Higgins Productions, Inc." .
+
+my_ns:company_0000055 a my_ns:productionCompany ;
+    foaf:name "Paramount Pictures Corp., Patron, Inc." .
+
+my_ns:company_0000057 a my_ns:productionCompany ;
+    foaf:name "Paramount Productions, Inc." .
+
+my_ns:company_0000058 a my_ns:productionCompany ;
+    foaf:name "Pathe Entertainment" .
+
+my_ns:company_0000059 a my_ns:productionCompany ;
+    foaf:name "Paul Gregory Productions" .
+
+my_ns:company_0000060 a my_ns:productionCompany ;
+    foaf:name "Phil Feldman Productions, Inc., Warner Bros.--Seven Arts, Inc." .
+
+my_ns:company_0000062 a my_ns:productionCompany ;
+    foaf:name "Samuel Goldwyn Productions, Inc." .
+
+my_ns:company_0000064 a my_ns:productionCompany ;
+    foaf:name "Shamley Productions, Inc." .
+
+my_ns:company_0000065 a my_ns:productionCompany ;
+    foaf:name "Stanley Kramer Productions, Inc." .
+
+my_ns:company_0000066 a my_ns:productionCompany ;
+    foaf:name "Strong Heart Productions" .
+
+my_ns:company_0000067 a my_ns:productionCompany ;
+    foaf:name "TIG Productions , Majestic Films International" .
+
+my_ns:company_0000068 a my_ns:productionCompany ;
+    foaf:name "Tatira-Hiller Productions" .
+
+my_ns:company_0000069 a my_ns:productionCompany ;
+    foaf:name "The Coppola Company" .
+
+my_ns:company_0000070 a my_ns:productionCompany ;
+    foaf:name "The Malpaso Company" .
+
+my_ns:company_0000071 a my_ns:productionCompany ;
+    foaf:name "The Mirisch Company, Inc." .
+
+my_ns:company_0000072 a my_ns:productionCompany ;
+    foaf:name "The Mirisch Company, Inc., Alpha Corp." .
+
+my_ns:company_0000073 a my_ns:productionCompany ;
+    foaf:name "The Mirisch Company, Inc., Ashton Productions, Inc." .
+
+my_ns:company_0000074 a my_ns:productionCompany ;
+    foaf:name "The Mirisch Corp." .
+
+my_ns:company_0000075 a my_ns:productionCompany ;
+    foaf:name "The Pando Company, Inc., Raybert Productions, Inc." .
+
+my_ns:company_0000076 a my_ns:productionCompany ;
+    foaf:name "The Tisch Company" .
+
+my_ns:company_0000077 a my_ns:productionCompany ;
+    foaf:name "Touchstone Pictures, Silver Screen Partners IV, Witt-Thomas Productions" .
+
+my_ns:company_0000078 a my_ns:productionCompany ;
+    foaf:name "Twentieth Century Fox Film Corp., Lightstorm Entertainment , Paramount Pictures Corp." .
+
+my_ns:company_0000080 a my_ns:productionCompany ;
+    foaf:name "United Artists Corp." .
+
+my_ns:company_0000081 a my_ns:productionCompany ;
+    foaf:name "Universal Pictures , Amblin' Entertainment" .
+
+my_ns:company_0000082 a my_ns:productionCompany ;
+    foaf:name "Universal Pictures , Bristol Bay Productions" .
+
+my_ns:company_0000083 a my_ns:productionCompany ;
+    foaf:name "Universal Pictures , Zanuck/Brown Company" .
+
+my_ns:company_0000085 a my_ns:productionCompany ;
+    foaf:name "Universal-International Pictures Co., Inc." .
+
+my_ns:company_0000086 a my_ns:productionCompany ;
+    foaf:name "Universal-International Pictures Co., Inc., Bryna Productions, Inc." .
+
+my_ns:company_0000087 a my_ns:productionCompany ;
+    foaf:name "Walt Disney Productions" .
+
+my_ns:company_0000088 a my_ns:productionCompany ;
+    foaf:name "Walter Wanger Pictures, Inc." .
+
+my_ns:company_0000089 a my_ns:productionCompany ;
+    foaf:name "Walter Wanger Productions, Inc." .
+
+my_ns:company_0000091 a my_ns:productionCompany ;
+    foaf:name "Warner Bros. Pictures, Inc., Charles K. Feldman Group Productions" .
+
+my_ns:company_0000092 a my_ns:productionCompany ;
+    foaf:name "Wildwood Enterprises, Inc." .
+
+my_ns:company_0000093 a my_ns:productionCompany ;
+    foaf:name "William Castle Enterprises" .
+
+my_ns:company_0000094 a my_ns:productionCompany ;
+    foaf:name "Winchester Pictures Corp., RKO Radio Pictures, Inc." .
+
+my_ns:company_0000095 a my_ns:productionCompany ;
+    foaf:name "Working Title Films" .
+
+my_ns:company_0000002 a my_ns:productionCompany ;
+    foaf:name "Amblin Entertainment" .
+
+my_ns:company_0000012 a my_ns:productionCompany ;
+    foaf:name "Charles Chaplin Productions" .
+
+my_ns:company_0000013 a my_ns:productionCompany ;
+    foaf:name "Chartoff-Winkler Productions, Inc." .
+
+my_ns:company_0000014 a my_ns:productionCompany ;
+    foaf:name "Columbia Pictures Corp." .
+
+my_ns:company_0000056 a my_ns:productionCompany ;
+    foaf:name "Paramount Pictures, Inc." .
+
+my_ns:company_0000063 a my_ns:productionCompany ;
+    foaf:name "Selznick International Pictures, Inc." .
+
+my_ns:company_0000084 a my_ns:productionCompany ;
+    foaf:name "Universal Pictures Corp." .
+
+my_ns:company_0000061 a my_ns:productionCompany ;
+    foaf:name "RKO Radio Pictures, Inc." .
+
+my_ns:company_0000046 a my_ns:productionCompany ;
+    foaf:name "Metro-Goldwyn-Mayer Corp." .
+
+my_ns:company_0000079 a my_ns:productionCompany ;
+    foaf:name "Twentieth Century-Fox Film Corp." .
+
+my_ns:company_0000090 a my_ns:productionCompany ;
+    foaf:name "Warner Bros. Pictures, Inc." .
+
