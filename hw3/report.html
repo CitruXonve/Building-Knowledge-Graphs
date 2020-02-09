@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>INF 558: Building Knowledge Graphs</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            h1, h2, h3 {
+                text-align: center;
+            }
+            pre {
+                white-space: pre-wrap;
+                word-break: keep-all;
+                /* word-wrap: break-word; */
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="inf-558-building-knowledge-graphs">INF 558: Building Knowledge Graphs</h1>
+<h2 id="report-of-homework3">Report of Homework3</h2>
+<h2 id="entity-resolution--knowledge-representation">Entity Resolution &amp; Knowledge Representation</h2>
+<h3 id="author-zongdi-xu-usc-id-5900-5757-70">Author: Zongdi Xu (USC ID 5900-5757-70)</h3>
+<h3 id="date-feb-9-2020">Date: Feb 9, 2020</h3>
+<h3 id="task-11">Task 1.1</h3>
+<h4 id="similarity-methods-for-movie-title--name">Similarity methods for <code>movie title / name</code></h4>
+<p>According to the analysis, the cases are quite complicated.  Some names have typos inside them.  Some match in a few leading or ending characters (refer to similarity function 1 &amp; 2). Others might be made out of the same series of words but appear to be in different orders (refer to similarity function 3 &amp; 4).</p>
+<p>The choice is a combination of both Jaro and Levenshtein Similarity.</p>
+<pre><code class="language-python"><div><span class="hljs-comment"># calculate the Jaro Similarity of the leading 8 characters of both names (the entire names instead if the length&lt;8)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_string_similarity_1</span><span class="hljs-params">(r_imdb, r_afi)</span>:</span>
+    s1 = r_imdb.name_string.lower()[:<span class="hljs-number">8</span>]
+    s2 = r_afi.name_string.lower()[:<span class="hljs-number">8</span>]
+
+    <span class="hljs-keyword">return</span> rltk.jaro_winkler_similarity(s1, s2)
+</div></code></pre>
+<pre><code class="language-python"><div><span class="hljs-comment"># calculate the Levenshtein Similarity of the ending 8 characters of both names (the entire names instead if the length&lt;8)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_string_similarity_2</span><span class="hljs-params">(r_imdb, r_afi)</span>:</span>
+    s1 = r_imdb.name_string.lower()[<span class="hljs-number">-8</span>:]
+    s2 = r_afi.name_string.lower()[<span class="hljs-number">-8</span>:] 
+
+    <span class="hljs-keyword">return</span> rltk.levenshtein_similarity(s1, s2)
+</div></code></pre>
+<pre><code class="language-python"><div><span class="hljs-comment"># split the names into words, re-concatenate them together in lexicographical order and calculate the Jaro Similarity</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_string_similarity_3</span><span class="hljs-params">(r_imdb, r_afi)</span>:</span>
+    s1 = <span class="hljs-string">''</span>.join(sorted(re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_imdb.name_string.lower())))
+    s2 = <span class="hljs-string">''</span>.join(sorted(re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_afi.name_string.lower())))
+
+    <span class="hljs-keyword">return</span> rltk.jaro_winkler_similarity(s1, s2)
+</div></code></pre>
+<pre><code class="language-python"><div><span class="hljs-comment"># split the names into words, re-concatenate them together in lexicographical order and calculate the Levenshtein Similarity</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">name_string_similarity_4</span><span class="hljs-params">(r_imdb, r_afi)</span>:</span>
+    s1 = <span class="hljs-string">''</span>.join(sorted(re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_imdb.name_string.lower())))
+    s2 = <span class="hljs-string">''</span>.join(sorted(re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_afi.name_string.lower())))
+
+    <span class="hljs-keyword">return</span> rltk.levenshtein_similarity(s1, s2)
+</div></code></pre>
+<h4 id="similarity-methods-for-release-year--date">Similarity methods for <code>release year / date</code></h4>
+<p>The case are less complicated because such values can be regarded as numerical values.  According to the analysis, both dates (or years) will be regarded as 100% similar if their difference is less than 2 years (taking possible typos and errors into consideration) or the either value is <code>null</code>, otherwise 0% similar.  Either value being <code>null</code> indicates something was missing, but these two movies might still match.</p>
+<pre><code class="language-python"><div>year_1 = r_imdb.raw_object.get(<span class="hljs-string">'year'</span>)
+year_2 = re.search(<span class="hljs-string">r'[0-9]{4}'</span>, r_afi.raw_object.get(<span class="hljs-string">'release_date'</span>, <span class="hljs-string">''</span>))
+match_year = abs(int(year_1) - int(year_2[<span class="hljs-number">0</span>])) &lt;= <span class="hljs-number">2</span> \
+    <span class="hljs-keyword">if</span> year_1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> year_2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> \
+    <span class="hljs-keyword">else</span> <span class="hljs-literal">True</span>
+
+match_year
+</div></code></pre>
+<h4 id="similarity-methods-for-genre">Similarity methods for <code>genre</code></h4>
+<p>Such values can be converted into sets of words.  Both sets are 100% similar when they have intersection or the either value is <code>null</code>.  Either value being <code>null</code> indicates something was missing, but these two movies might still match.</p>
+<pre><code class="language-python"><div>genre_1 = set(word[:<span class="hljs-number">3</span>] <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_imdb.raw_object.get(<span class="hljs-string">'genre'</span>, <span class="hljs-string">''</span>).lower().strip()))
+genre_2 = set(word[:<span class="hljs-number">3</span>] <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> re.split(<span class="hljs-string">r'[-,\s]+'</span>, r_afi.raw_object.get(<span class="hljs-string">'genre'</span>, <span class="hljs-string">''</span>).lower().strip()))
+
+match_genre = len(genre_1 &amp; genre_2) &gt; <span class="hljs-number">0</span> \
+    <span class="hljs-keyword">if</span> genre_1 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">and</span> genre_2 <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">else</span> <span class="hljs-literal">True</span>
+
+match_genre
+</div></code></pre>
+<h3 id="task-12">Task 1.2</h3>
+<p>The combination of all the scores of names above:</p>
+<pre><code class="language-python"><div>score_1 = name_string_similarity_1(r_imdb, r_afi)
+score_2 = name_string_similarity_2(r_imdb, r_afi)
+score_3 = name_string_similarity_3(r_imdb, r_afi)
+score_4 = name_string_similarity_4(r_imdb, r_afi)
+
+<span class="hljs-comment"># if the both name are exactly the same, their combined score will be fixed at 1.1; otherwise combine the scores proportionally</span>
+score = <span class="hljs-number">1.1</span> <span class="hljs-keyword">if</span> name_1 == name_2 \
+        <span class="hljs-keyword">else</span> <span class="hljs-number">0.1</span> * score_1 + <span class="hljs-number">0.15</span> * score_2 + <span class="hljs-number">0.45</span> * score_3 + <span class="hljs-number">0.4</span> * score_4
+
+score &gt; <span class="hljs-number">1.0</span>
+</div></code></pre>
+<p>The algorithm of combining the scores from all the attributes and determine whether both movies match or not:</p>
+<ul>
+<li>Step 1: If both movies have similar release dates / years (<code>match_year == True</code>), output this pair of movies as a possible match with their combined name <code>score</code> and jump to Step 4; otherwise continue to Step 2.</li>
+<li>Step 2: If both movies have similar genres (<code>match_genre == True</code>), continue to Step 3; otherwise disgard this pair of movies and jump to Step 4.</li>
+<li>Step 3: If both movies have the exact same name (name scores <code>&gt; 1.0</code>), output this pair of movies as a possible match with their combined name <code>score</code> and continue to Step 4; otherwise disgard this pair of movies since they are dissimilar.</li>
+<li>Step 4: Repeat Step 1~3 to get the scores of every possible matches, of which one from IMDB and the other one from AFI.</li>
+<li>Step 5: Finally, pick up one possible match with the highest combined name score, which turns out to be the most likely match.</li>
+</ul>
+<pre><code class="language-python"><div><span class="hljs-comment"># entity linkage scoring function</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rule_based_method</span><span class="hljs-params">(r_imdb, r_afi)</span>:</span>
+    <span class="hljs-comment"># calculate score, match_year &amp; match_genre as described before</span>
+    <span class="hljs-comment"># ...</span>
+
+    <span class="hljs-comment"># the algorithm to combine all scores</span>
+    <span class="hljs-keyword">return</span> match_year <span class="hljs-keyword">or</span> match_genre <span class="hljs-keyword">and</span> score &gt; <span class="hljs-number">1.0</span>, score
+
+<span class="hljs-comment"># threshold value to determine if we are confident about the  match</span>
+MY_TRESH = <span class="hljs-number">0.8</span>
+
+valid_match = []
+<span class="hljs-comment"># nested loop in search of matches</span>
+<span class="hljs-keyword">for</span> r_imdb <span class="hljs-keyword">in</span> ds_imdb:
+    <span class="hljs-comment"># test this record with AFI records</span>
+    optimum = (<span class="hljs-literal">None</span>, MY_TRESH)
+    <span class="hljs-keyword">for</span> r_afi <span class="hljs-keyword">in</span> ds_afi:
+        result, confidence = rule_based_method(r_imdb, r_afi)
+        <span class="hljs-keyword">if</span> result <span class="hljs-keyword">and</span> confidence &gt; optimum[<span class="hljs-number">1</span>]:
+            <span class="hljs-comment"># replace by another match of a higher combined name score</span>
+            optimum = (r_afi, confidence)
+
+    <span class="hljs-keyword">if</span> optimum[<span class="hljs-number">0</span>] <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>: <span class="hljs-comment"># find at least one local optimal match</span>
+        r_afi, confidence = optimum
+        valid_match.append(
+            {<span class="hljs-string">'imdb_movie'</span>: r_imdb.raw_object[<span class="hljs-string">'url'</span>], <span class="hljs-string">'afi_movie'</span>: r_afi.raw_object[<span class="hljs-string">'url'</span>]})
+    <span class="hljs-keyword">else</span>: <span class="hljs-comment"># no match</span>
+        valid_match.append(
+            {<span class="hljs-string">'imdb_movie'</span>: r_imdb.raw_object[<span class="hljs-string">'url'</span>], <span class="hljs-string">'afi_movie'</span>: <span class="hljs-literal">None</span>})
+
+valid_match
+</div></code></pre>
+<h3 id="task-21">Task 2.1</h3>
+<p>The properties of describing <code>imdb-rating</code>, <code>imdb-metascore</code>, <code>imdb-votes</code>, <code>gross-income</code> and <code>cinematographer</code> attributes can't be found from <code>schema.org</code>.</p>
+<pre><code><code><div>my_ns:imdbRating a schema:Property .
+
+my_ns:imdbMetascore a schema:Property .
+
+my_ns:imdbVotes a schema:Property .
+
+my_ns:grossIncome a schema:Property .
+
+my_ns:cinematographer a schema:Property .
+</div></code></code></pre>
+<p>Production Company Class:</p>
+<pre><code><code><div>my_ns:productionCompany a schema:Class ;
+    rdfs:subClassOf schema:Organization ;
+    foaf:name xsd:text .
+</div></code></code></pre>
+<p>Movie Class:</p>
+<pre><code><code><div>my_ns:Movie a schema:Class ;
+    rdfs:subClassOf schema:Movie ;
+    # TODO: complete the rest of the missing attributes
+    schema:headline xsd:text ; # title
+    schema:datePublished xsd:date ; # release-date
+    schema:contentRating schema:Rating ; # certificate
+    schema:duration schema:Duration ; # runtime
+    schema:genre xsd:text ; # genre
+    my_ns:imdbRating xsd:text ; # imdb-rating
+    my_ns:imdbMetascore xsd:text ; # imdb-metascore
+    my_ns:imdbVotes xsd:text ; # imdb-votes
+    my_ns:grossIncome xsd:text ; # gross-income
+    schema:producer schema:Person ; # producer
+    schema:author schema:Person ; # writer
+    my_ns:cinematographer schema:text ; # cinematographer
+    schema:productionCompany my_ns:productionCompany . # production-company
+</div></code></code></pre>
+<h3 id="task-23">Task 2.3</h3>
+<p>The graph visualization:
+<img src="file:////Users/crxon/558/hw3/visualize.svg" alt=""></p>
+
+    </body>
+    </html>

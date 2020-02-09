@@ -1,10 +1,10 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix my_ns: <http://inf558.org/myfakenamespace#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix schema: <http://schema.org/> .
-@prefix my_ns: <http://inf558.org/myfakenamespace#> .
 
 #### Production Company Class ####
 my_ns:productionCompany a schema:Class ;
@@ -36,16 +36,16 @@ my_ns:Movie a schema:Class ;
     my_ns:grossIncome xsd:text ; # gross-income
     schema:producer schema:Person ; # producer
     schema:author schema:Person ; # writer
-    schema:cinematographer schema:text ; # cinematographer
+    my_ns:cinematographer schema:text ; # cinematographer
     schema:productionCompany my_ns:productionCompany . # production-company
 
 <https://www.imdb.com/title/tt0015864/> a my_ns:Movie ;
+    my_ns:cinematographer "None" ;
     my_ns:grossIncome "$5.45M" ;
     my_ns:imdbMetascore "None" ;
     my_ns:imdbRating "8.2" ;
     my_ns:imdbVotes "93,057" ;
     schema:author "Charles Chaplin" ;
-    schema:cinematographer "None" ;
     schema:contentRating "Not Rated" ;
     schema:datePublished "1925-12-02"^^xsd:date ;
     schema:duration "95 min"^^xsd:time ;
@@ -55,12 +55,12 @@ my_ns:Movie a schema:Class ;
     schema:productionCompany my_ns:company_0000012 .
 
 <https://www.imdb.com/title/tt0021749/> a my_ns:Movie ;
+    my_ns:cinematographer "Mark Marklatt" ;
     my_ns:grossIncome "$0.02M" ;
     my_ns:imdbMetascore "99" ;
     my_ns:imdbRating "8.5" ;
     my_ns:imdbVotes "154,848" ;
     schema:author "None" ;
-    schema:cinematographer "Mark Marklatt" ;
     schema:contentRating "G" ;
     schema:datePublished "1931-07-23"^^xsd:date ;
     schema:duration "87 min"^^xsd:time ;
