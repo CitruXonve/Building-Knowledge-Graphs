@@ -37,10 +37,13 @@ joint_movies = []
 all_companies = set()
 with open(result_file) as fin:
     for item in json.loads(fin.read()):
-        if item['imdb_movie'] is not None and item['afi_movie'] is not None:
+        if item['imdb_movie'] is not None:
             url = item['imdb_movie']
-            new_item = r_afi.get(item['afi_movie'], {}).copy()
-            new_item.update(r_imdb.get(item['imdb_movie'], {}))
+            if item['afi_movie'] is not None:
+                new_item = r_afi.get(item['afi_movie'], {}).copy()
+                new_item.update(r_imdb.get(item['imdb_movie'], {}))
+            else:
+                new_item = r_imdb.get(item['imdb_movie'], {}).copy()
             joint_movies.append(new_item)
             all_companies.add(new_item.get('production_company', ''))
 
@@ -71,11 +74,11 @@ for new_item in joint_movies:
     my_kg.add((node_uri, MYNS.grossIncome, Literal(new_item.get('gross')))) # gross-income
     my_kg.add((node_uri, SCHEMA.producer, Literal(new_item.get('producer')))) # producer
     my_kg.add((node_uri, SCHEMA.author, Literal(new_item.get('writer')))) # writer
-    my_kg.add((node_uri, SCHEMA.cinematographer, Literal(new_item.get('cinematographer')))) # cinematographer
+    my_kg.add((node_uri, MYNS.cinematographer, Literal(new_item.get('cinematographer')))) # cinematographer
 
     if new_item.get('production_company') is not None:
         my_kg.add((node_uri, SCHEMA.productionCompany, MYNS[URI_companies[new_item.get('production_company')]])) # production-company
     else:
         my_kg.add((node_uri, SCHEMA.productionCompany, Literal(None))) # production-company
 
-my_kg.serialize('graph.ttl', format="turtle")
+my_kg.serialize('Zongdi_Xu_hw03_movie_triples.ttl', format="turtle")
