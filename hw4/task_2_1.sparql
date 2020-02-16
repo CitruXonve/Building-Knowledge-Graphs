@@ -1,0 +1,18 @@
+SELECT DISTINCT ?actor ?name ?date_of_birth
+WHERE
+{
+	?actor wdt:P106/wdt:P279* wd:Q33999 ; 
+           wdt:P106/wdt:P279* wd:Q639669 ;
+           p:P361 [ ps:P361/wdt:P31 wd:Q215380 ;
+             pq:P580 ?start_date ;
+             pq:P582 ?end_date ] .
+
+    FILTER(YEAR(?start_date)>=1960 && YEAR(?end_date)<=2010)
+          
+	OPTIONAL { ?actor wdt:P569 ?date_of_birth .}.
+  
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
+                             ?actor rdfs:label ?name .
+                            }
+}
+LIMIT 10

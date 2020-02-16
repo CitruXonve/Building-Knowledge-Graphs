@@ -1,0 +1,26 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?actor_name ?director_name ?num
+WHERE
+{
+  {
+    SELECT ?actor ?director (COUNT(?movie) AS ?num) 
+    WHERE {
+      ?actor a lmdb:actor ;
+        lmdb:actor_name ?actor_name .
+      ?movie a lmdb:film ;
+          lmdb:actor ?actor ;
+          lmdb:director ?director .
+      ?director a lmdb:director ;
+          lmdb:director_name ?director_name .
+      FILTER (?actor_name != ?director_name)
+    }
+    GROUP BY ?actor ?director
+    HAVING (?num > 20)
+  }
+  ?actor lmdb:actor_name ?actor_name .
+  ?director lmdb:director_name ?director_name .
+}
+LIMIT 10

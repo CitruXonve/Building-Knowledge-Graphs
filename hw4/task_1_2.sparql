@@ -1,0 +1,22 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix dbpprop: <http://dbpedia.org/property/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?actor ?name
+WHERE {
+  	?actor a lmdb:actor ;
+    	lmdb:actor_name ?name .
+    ?producer a lmdb:producer ;
+    	lmdb:producer_name ?name .
+  	FILTER NOT EXISTS 
+    {
+    	?director a lmdb:director ;
+        	lmdb:director_name ?name .
+    }
+}
+LIMIT 10

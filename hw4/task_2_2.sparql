@@ -1,0 +1,22 @@
+SELECT ?film ?name ?actor_num
+WHERE
+{
+  {
+    SELECT ?film (COUNT(DISTINCT ?actor) AS ?actor_num) #(GROUP_CONCAT(DISTINCT ?actor) AS ?_0) (GROUP_CONCAT(?date) AS ?_1)
+    WHERE
+    {
+      ?film wdt:P31 wd:Q11424 ;
+            wdt:P161 ?actor .
+      ?actor p:P1411 [ ps:P1411 wd:Q103916 ;
+                pq:P585 ?date ] .
+      FILTER (YEAR(?date) > 2000)
+    }
+    GROUP BY ?film 
+    HAVING (?actor_num >= 4)
+    LIMIT 10
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
+                             ?film rdfs:label ?name .
+                            }
+}
+

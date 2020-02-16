@@ -1,0 +1,38 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix dbpprop: <http://dbpedia.org/property/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+
+select DISTINCT ?name ?birth
+where { 
+  service <http://dbpedia.org/sparql> {
+        ?db_actor a dbo:Actor ;
+                foaf:name ?name ;
+                foaf:gender ?gender ;
+                dbo:birthDate ?birth ;
+                dbo:birthYear ?y.
+        FILTER(?y>"1970"^^xsd:gYear && REGEX(?gender, "female", "i"))
+  }
+  ?actor a lmdb:actor ;
+    owl:sameAs ?db_actor .
+    lmdb:actor_name ?name .
+}
+LIMIT 10
+# select DISTINCT ?name (xsd:date(?birth) AS ?date_of_birth)
+# where { 
+#   service <http://dbpedia.org/sparql> {
+#         ?db_actor a dbo:Actor ;
+#                 foaf:name ?db_actor_name ;
+#                 foaf:gender ?gender ;
+#       			dbo:birthDate ?birth .
+#       	BIND(STR(?db_actor_name) AS ?name)
+#       	BIND(IF(datatype(xsd:date(?birth)) = xsd:date, YEAR(xsd:date(?birth)), 0) AS ?year) 
+#         FILTER(?year>1970 && STR(?gender) = "female")
+#   }
+#   ?actor a lmdb:actor ;
+#     lmdb:actor_name ?name .
+# }
+# LIMIT 10

@@ -1,0 +1,11 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+
+SELECT DISTINCT ?actor_name ?movie_title
+WHERE {
+    ?movie a lmdb:film ;
+    	lmdb:actor/lmdb:actor_name ?actor_name ;
+        dcterms:title ?movie_title .
+    FILTER regex(?actor_name, "^B")
+}
+LIMIT 10

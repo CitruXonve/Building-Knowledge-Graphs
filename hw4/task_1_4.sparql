@@ -1,0 +1,17 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?country_name ?millions (COUNT(DISTINCT ?movie) AS ?num)
+WHERE {
+  ?movie a lmdb:film ; 
+    lmdb:country/lmdb:country_name ?country_name ;
+    lmdb:country/lmdb:country_population ?popu ;
+    lmdb:genre/lmdb:film_genre_name ?genre_name .
+  FILTER (?genre_name = "Drama") # ?Comedy Drama ______
+  BIND( xsd:integer(?popu)/1000000 AS ?millions ).
+}
+GROUP BY ?country_name ?millions
+ORDER BY DESC(?num)
+LIMIT 10
