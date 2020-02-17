@@ -6,18 +6,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX lmdb: <http://data.linkedmdb.org/movie/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#> 
 
-select DISTINCT ?name ?birth
+select DISTINCT ?name ?date_of_birth
 where { 
   service <http://dbpedia.org/sparql> {
+    SELECT DISTINCT ?db_actor (MIN(?birth) AS ?date_of_birth)
+    WHERE
+    {
         ?db_actor a dbo:Actor ;
-                foaf:name ?name ;
                 foaf:gender ?gender ;
                 dbo:birthDate ?birth ;
                 dbo:birthYear ?y.
         FILTER(?y>"1970"^^xsd:gYear && REGEX(?gender, "female", "i"))
+    }
+    GROUP BY ?db_actor
   }
   ?actor a lmdb:actor ;
-    owl:sameAs ?db_actor .
+    owl:sameAs ?db_actor ;
     lmdb:actor_name ?name .
 }
 LIMIT 10

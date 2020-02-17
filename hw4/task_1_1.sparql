@@ -1,11 +1,12 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX lmdb: <http://data.linkedmdb.org/movie/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?actor_name ?movie_title
 WHERE {
     ?movie a lmdb:film ;
     	lmdb:actor/lmdb:actor_name ?actor_name ;
-        dcterms:title ?movie_title .
+        dcterms:title|rdfs:label ?movie_title .
     FILTER regex(?actor_name, "^B")
 }
 LIMIT 10

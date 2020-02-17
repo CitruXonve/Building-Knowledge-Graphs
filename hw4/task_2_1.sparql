@@ -9,7 +9,7 @@ WHERE
 
     FILTER(YEAR(?start_date)>=1960 && YEAR(?end_date)<=2010)
           
-	OPTIONAL { ?actor wdt:P569 ?date_of_birth .}.
+	  OPTIONAL { ?actor wdt:P569 ?date_of_birth .}.
   
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
                              ?actor rdfs:label ?name .
