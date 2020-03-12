@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>INF 558: Building Knowledge Graphs</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            h1, h2, h3 {
+                text-align: center;
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+            }
+            p, code span, code div {
+                word-break: break-all;
+            }
+            code {
+                overflow-block: auto;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="inf-558-building-knowledge-graphs">INF 558: Building Knowledge Graphs</h1>
+<h2 id="report-of-homework5">Report of Homework5</h2>
+<h2 id="information-extraction-ii">Information Extraction II</h2>
+<h3 id="author-zongdi-xu-usc-id-5900-5757-70">Author: Zongdi Xu (USC ID 5900-5757-70)</h3>
+<h3 id="date-mar-11-2020">Date: Mar 11, 2020</h3>
+<h3 id="task-11">Task 1.1</h3>
+<p>(Refer to uploaded files)</p>
+<h3 id="task-12">Task 1.2</h3>
+<h4 id="121-labeling-functions">1.2.1 Labeling functions</h4>
+<pre><code class="language-python"><div><span class="hljs-keyword">from</span> snorkel.lf_helpers <span class="hljs-keyword">import</span> (
+    get_left_tokens, get_right_tokens, get_between_tokens,
+    get_text_between, get_tagged_text, contains_token
+)
+
+
+<span class="hljs-keyword">import</span> random, sys
+
+<span class="hljs-comment"># <span class="hljs-doctag">TODO:</span> Define your LFs here, below is a very simple LF</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_random</span><span class="hljs-params">(c)</span>:</span>
+    <span class="hljs-keyword">return</span> round(random.random())
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_distance</span><span class="hljs-params">(c)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> len(list(get_between_tokens(c)))&lt;<span class="hljs-number">7</span> <span class="hljs-keyword">else</span> <span class="hljs-number">-1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_hash</span><span class="hljs-params">(c)</span>:</span>
+    <span class="hljs-keyword">return</span> (hash(c.person.get_span())+hash(c.organization.get_span())+sys.maxsize) % <span class="hljs-number">2</span> * <span class="hljs-number">2</span> <span class="hljs-number">-1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_right_detect</span><span class="hljs-params">(c)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> contains_token(c, <span class="hljs-string">'school'</span>) <span class="hljs-keyword">or</span> contains_token(c, <span class="hljs-string">'college'</span>) \
+        <span class="hljs-keyword">or</span> contains_token(c, <span class="hljs-string">'university'</span>) \
+        <span class="hljs-keyword">else</span> <span class="hljs-number">-1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_between_detect_refined</span><span class="hljs-params">(c)</span>:</span>
+    candidate_predicates = list(get_between_tokens(c))
+    prepositions = {<span class="hljs-string">'at'</span>, <span class="hljs-string">'from'</span>, <span class="hljs-string">'to'</span>}
+    intransitive_predicates = {<span class="hljs-string">'graduated'</span>, <span class="hljs-string">'studied'</span>, <span class="hljs-string">'enrolled'</span>,  <span class="hljs-string">'went'</span>, <span class="hljs-string">'returned'</span>, <span class="hljs-string">'educated'</span>}
+    transitive_predicates = {<span class="hljs-string">'attended'</span>}
+    phrases = {<span class="hljs-string">'member'</span>, <span class="hljs-string">'of'</span>}
+    <span class="hljs-keyword">if</span> len(transitive_predicates.intersection(candidate_predicates))&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> \
+        len(prepositions.intersection(candidate_predicates))&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">and</span> \
+            len(intransitive_predicates.intersection(candidate_predicates))&gt;<span class="hljs-number">0</span> \
+        <span class="hljs-keyword">or</span> len(phrases.intersection(candidate_predicates))&gt;<span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> 
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_combined</span><span class="hljs-params">(c)</span>:</span>
+    <span class="hljs-keyword">if</span> LF_between_detect_refined(c)==<span class="hljs-number">1</span> <span class="hljs-keyword">and</span> LF_right_detect(c)==<span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_combined_refined</span><span class="hljs-params">(c)</span>:</span>
+    taboo = {<span class="hljs-string">'later'</span>, <span class="hljs-string">'here'</span>, <span class="hljs-string">'there'</span>}
+    <span class="hljs-keyword">if</span> LF_combined(c)==<span class="hljs-number">1</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> len(taboo.intersection(get_between_tokens(c)))&gt;<span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+</div></code></pre>
+<h4 id="122-performance">1.2.2 Performance</h4>
+<ul>
+<li>
+<p>Score of generative model</p>
+<p><img src="file:////Users/crxon/558/hw5/task1.2.2-1.png" alt=""></p>
+</li>
+<li>
+<p>Detailed statistics about LFs learned by generative model</p>
+<p><img src="file:////Users/crxon/558/hw5/task1.2.2-2.png" alt=""></p>
+</li>
+</ul>
+<h4 id="123-distribution-of-training-marginals">1.2.3 Distribution of training marginals</h4>
+<p><img src="file:////Users/crxon/558/hw5/task1.2.3.png" alt=""></p>
+<h4 id="124-comment-of-marginal-distribution">1.2.4 Comment of marginal distribution</h4>
+<p>It is rather good because it shows a clear differentiation between 0.0 and 1.0.</p>
+<h3 id="task-13">Task 1.3</h3>
+<h4 id="131-additional-labeling-function">1.3.1 Additional Labeling Function</h4>
+<pre><code class="language-python"><div>  <span class="hljs-keyword">from</span> SPARQLWrapper <span class="hljs-keyword">import</span> SPARQLWrapper, JSON
+
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">LF_distant_supervision</span><span class="hljs-params">(c)</span>:</span>
+      <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> LF_right_detect(c)==<span class="hljs-number">1</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>
+      sparql = SPARQLWrapper(<span class="hljs-string">"http://dbpedia.org/sparql"</span>)
+      sparql.setQuery(<span class="hljs-string">f"""
+          PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+          PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+          PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+          SELECT DISTINCT ?_name ?_edu
+          WHERE <span class="hljs-subst">{{
+              [] a dbo:Person ;
+                  foaf:name ?name ;
+                  dbo:almaMater [ foaf:name ?edu ] .
+              BIND(STR(?name) AS ?_name)
+              BIND(STR(?edu) AS ?_edu)
+              FILTER(REGEX(?_edu, <span class="hljs-string">"(school)|(university)|(college)|(academy)"</span>, <span class="hljs-string">"i"</span>))
+              FILTER(REGEX(?_name, <span class="hljs-string">"{'|'.join(list(map(lambda name: f'({name})', c.person.get_span().split())))}"</span>, <span class="hljs-string">"i"</span>))
+              # FILTER(STR(?name) = <span class="hljs-string">"{c.person.get_span()}"</span>)
+              FILTER(?_edu = <span class="hljs-string">"{c.organization.get_span()}"</span>)
+          }</span>}
+          # LIMIT 10
+      """</span>)
+      sparql.setReturnFormat(JSON)
+      results = sparql.query().convert()
+      <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> len(results[<span class="hljs-string">"results"</span>][<span class="hljs-string">"bindings"</span>])&gt;<span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">-1</span>
+</div></code></pre>
+<h4 id="132-performance">1.3.2 Performance</h4>
+<ul>
+<li>
+<p>Score of generative model</p>
+<p><img src="file:////Users/crxon/558/hw5/task1.3.2-1.png" alt=""></p>
+</li>
+<li>
+<p>Detailed statistics about LFs learned by generative model</p>
+<p><img src="file:////Users/crxon/558/hw5/task1.3.2-2.png" alt=""></p>
+</li>
+</ul>
+<h4 id="133-distribution-of-training-marginals">1.3.3 Distribution of training marginals</h4>
+<p><img src="file:////Users/crxon/558/hw5/task1.3.3.png" alt=""></p>
+<h4 id="134-comment-of-marginal-distribution">1.3.4 Comment of marginal distribution</h4>
+<p>It is even better because it maintains a clear differentiation between 0.0 and 1.0 like that in <code>Task 1.2</code>, while removes some ambiguity near 0.4 or 0.6.</p>
+<h3 id="task-14">Task 1.4</h3>
+<ul>
+<li>
+<p>Best tuned parameters</p>
+<pre><code class="language-python"><div>  train_kwargs = {
+    <span class="hljs-string">'lr'</span>:            <span class="hljs-number">0.009</span>, <span class="hljs-comment"># learning rate of the model</span>
+    <span class="hljs-string">'embedding_dim'</span>: <span class="hljs-number">70</span>,   <span class="hljs-comment"># size of the feature vector</span>
+    <span class="hljs-string">'hidden_dim'</span>:    <span class="hljs-number">60</span>,   <span class="hljs-comment"># number of nodes in each layer in the model</span>
+    <span class="hljs-string">'n_epochs'</span>:      <span class="hljs-number">11</span>,   <span class="hljs-comment"># number of training epochs</span>
+    <span class="hljs-string">'dropout'</span>:       <span class="hljs-number">0.2</span>,  <span class="hljs-comment"># dropout rate (during learning)</span>
+    <span class="hljs-string">'batch_size'</span>:    <span class="hljs-number">70</span>,   <span class="hljs-comment"># training batch size</span>
+    <span class="hljs-string">'seed'</span>:          <span class="hljs-number">281</span>
+  }
+</div></code></pre>
+</li>
+<li>
+<p>Best F1 score: <code>0.483</code></p>
+<p><img src="file:////Users/crxon/558/hw5/task1.4.png" alt=""></p>
+</li>
+</ul>
+
+    </body>
+    </html>
