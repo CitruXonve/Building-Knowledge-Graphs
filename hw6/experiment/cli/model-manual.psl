@@ -1,0 +1,11 @@
+1: !SamePaper(A, B)^2
+
+// TitleSim(A, B) >= 0.8 .
+// YearsSim(A, B) >= 0.75 .
+
+0.905: TitleSim(A, B) & YearsSim(A, B) & (A != B) >> SamePaper(A, B) ^2
+0.481: TitleSim(B, A) & YearsSim(B, A) & (A != B) >> SamePaper(B, A) ^2
+
+// SamePaper(A, +B) <= 4 .
+
+// 0.001: !SamePaper(A, B)^2

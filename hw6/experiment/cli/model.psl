@@ -1,0 +1,4 @@
+1: !SamePaper(A, B)^2
+
+0.925: TitleSim(A, B) & YearsSim(A, B) & (A != B) >> SamePaper(A, B) ^2
+0.925: TitleSim(B, A) & YearsSim(B, A) & (A != B) >> SamePaper(B, A) ^2
