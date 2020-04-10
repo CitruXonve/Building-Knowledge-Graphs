@@ -1,6 +1,6 @@
 import scrapy, re
 
-class USCSpider(scrapy.Spider):
+class USC_Catalogue_Spider(scrapy.Spider):
     name = 'USCCatalogueSpider'
     start_urls = ['https://catalogue.usc.edu/content.php?catoid=11&navoid=3756']
     course_urls = set()
@@ -14,11 +14,9 @@ class USCSpider(scrapy.Spider):
                     'url': full_url, 
                     'type': 'program',
                 }
-                yield response.follow(url = full_url, callback = self.parse_program)
-                yield result
-        
-        for course in self.course_urls():
-            yield response.follow(url = course, callback = self.parse_course)
+                if re.search('Computer Science', result['label']):
+                    yield response.follow(url = full_url, callback = self.parse_program)
+                    yield result
 
     def parse_program(self, response):
         course_list = []
@@ -26,13 +24,13 @@ class USCSpider(scrapy.Spider):
             course_attr = re.search('([0-9]+).*?([0-9]+)', course.css('a::attr("onclick")').get())
             if course_attr:
                 course_composite_url = f'https://catalogue.usc.edu/preview_course.php?catoid={course_attr.group(1)}&coid={course_attr.group(2)}'
-                # yield({
-                #     'type': 'course', 
-                #     'label': course.css('a ::text').get(),
-                #     'url': course_composite_url,
-                # })
-                self.course_urls.add(course_composite_url)
-                course_list.append(course_composite_url)
+
+                if not course_composite_url in self.course_urls:
+                    yield response.follow(url = course_composite_url, callback = self.parse_course)
+                    self.course_urls.add(course_composite_url)
+                    pass
+
+                course_list.append('-'.join(course.css('::text').get().split()[:2]))
 
         yield {
             "url": response.url, 
@@ -44,10 +42,11 @@ class USCSpider(scrapy.Spider):
         pass
 
     def parse_course(self, response):
+        text = response.xpath('//td[@class="block_content_popup"][.//text()]').get(default='')
         yield {
             'title': response.css('h1#course_preview_title ::text').get(),
             'url': response.url,
             'type': 'course',
-            'text': response.css('td.block_content_popup ::text').get(),
+            'description': text,
         }
         pass
