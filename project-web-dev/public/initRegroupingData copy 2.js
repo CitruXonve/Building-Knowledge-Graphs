@@ -1,11 +1,11 @@
 {
     "class": "go.GraphLinksModel",
         "nodeDataArray": [
-            { "key": 0, "text": "Computer Science \t (Game Development) (MS)", "isGroup": true, "category": "OfGroups" },
-            { "key": 1, "text": "Required Courses \t (12 units)", "isGroup": true, "category": "OfNodes", "group": 0  },
-            { "key": 2, "text": "Game Development Core \t (8 Units)", "isGroup": true, "category": "OfNodes", "group": 0  },
-            { "key": 3, "text": "Project Classes \t (6 Units)", "isGroup": true, "category": "OfNodes", "group": 0 },
-            { "key": 4, "text": "Electives \t (6 Units)", "isGroup": true, "category": "OfNodes", "group": 0 },
+            { "key": 0, "text": "Computer Science \n (Game Development) (MS)", "isGroup": true, "category": "OfGroups" },
+            { "key": 1, "text": "Required Courses \n (12 units)", "isGroup": true, "category": "OfNodes", "group": 0  },
+            { "key": 2, "text": "Game Development Core \n (8 Units)", "isGroup": true, "category": "OfNodes", "group": 0  },
+            { "key": 3, "text": "Project Classes \n (6 Units)", "isGroup": true, "category": "OfNodes", "group": 0 },
+            { "key": 4, "text": "Electives \n (6 Units)", "isGroup": true, "category": "OfNodes", "group": 0 },
             { "key": 5, "text": "Other prerequisites", "isGroup": true, "category": "OfNodes" },
             { "text": "CSCI 551", "group": 1, "key": -7 },
             { "text": "CSCI 561", "group": 1, "key": -8 },

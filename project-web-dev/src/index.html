@@ -16,10 +16,43 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Startup App</title>
+    <title>Computer Science Program and Course KG</title>
+    <link href="/styles11.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="row logo"> <a href="http://viterbi.usc.edu/" target="_blank" class="header-logo" aria-label="USC Viterbi School of Engineering"> <img src="https://www.cs.usc.edu/wp-content/themes/viterbischool_4_0_2/assets/images/USC-Viterbi.png" alt="USC Viterbi School of Engineering"> </a> <a href="http://www.usc.edu/" target="_blank" class="header-shield-desktop" aria-label="University of Southern California"> <img src="https://www.cs.usc.edu/wp-content/themes/viterbischool_4_0_2/assets/images/USC-Shield.png" alt="University of Southern California"> </a> <a href="http://www.usc.edu/" class="header-shield-mobile" aria-label="University of Southern California" target="_blank"> <img src="https://www.cs.usc.edu/wp-content/themes/viterbischool_4_0_2/assets/images/Small-Use-Shield_BlackOnTrans.png" alt="University of Southern California"> </a></div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span>
+              <a id="logo_h2" href="/"><span style="color:#ff6600;font-size:1.8em;">Computer Science Program and Course KG</span></a>
+            </span>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a href="/"><span class="myfancyfont2" style="color:#ff6600;font-size:1.7em;">Home</span></a></li>
+              <li ><a href="/description?uri=cs%3Acourse"><span class="myfancyfont2" style="color:#ff6600;font-size:1.7em;">USC Course</span></a></li>
+              <li ><a href="/description?uri=cs%3Aonline_course"><span class="myfancyfont2" style="color:#ff6600;font-size:1.7em;">Online Course</span></a></li>
+              <li ><a href="/query"><span class="myfancyfont2" style="color:#ff6600;font-size: 1.7em;">SPARQL Query</span></a></li>
+              <li>
+                <a href="/planner"><span class="myfancyfont2" style="color:#ff6600;font-size: 1.7em;">Course Planner</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div id="root"></div>
+    <!-- <footer class="footer">
+      <small>© 2020 Dan Yang, Zongdi Xu</small>
+    </footer> -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

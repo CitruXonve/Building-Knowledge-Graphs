@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     // the output bundle won't be optimized for production but suitable for development
@@ -10,7 +11,8 @@ module.exports = {
         // the output of the webpack build will be in /public directory
         path: path.resolve(__dirname, '/public'),
         // the filename of the JS bundle will be bundle.js
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -30,6 +32,35 @@ module.exports = {
                 }
             },
             {
+                test: /\.s(a|c)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'postcss-loader'
+                    },
+                    {
+                        loader: 'sass-loader',
+                        // options: {
+                        //     includePaths: [
+                        //         path.resolve(__dirname, './node_modules')
+                        //     ]
+                        // }
+                    }
+                ]
+            },
+            { // solve @import
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
                 test: /\.html$/,
                 exclude: /index\.html/,
                 loader: 'html-loader',
@@ -44,6 +75,9 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })],
     // auto reload
     devServer: {
+        historyApiFallback: true, // solve "cannot GET /*"
+        // contentBase: '/',
+        hot: true,
         contentBase: path.join(__dirname, '/public'), // serve your static files from here
         watchContentBase: true, // initiate a page refresh if static content changes
         proxy: [ // allows redirect of requests to webpack-dev-server to another destination
@@ -53,7 +87,7 @@ module.exports = {
                 secure: false,
             },
         ],
-        port: 3030, // port webpack-dev-server listens to, defaults to 8080
+        port: 6006, // port webpack-dev-server listens to, defaults to 8080
         overlay: { // Shows a full-screen overlay in the browser when there are compiler errors or warnings
             warnings: false, // defaults to false
             errors: false, // defaults to false

@@ -1,11 +1,11 @@
 export default class regroupingController {
 
-    static init = () => {
+    static init = (ViewerId, data, onChange, isPaletteOn) => {
         if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
         var $ = go.GraphObject.make;
 
-        myDiagram =
-            $(go.Diagram, "myRegroupingDiagram",
+        var myDiagram =
+            $(go.Diagram, ViewerId,
                 {
                     // what to do when a drag-drop occurs in the Diagram's background
                     mouseDrop: function (e) { finishDrop(e, null); },
@@ -83,7 +83,7 @@ export default class regroupingController {
                                 opacity: 0.75,
                                 stroke: "#404040"
                             },
-                            new go.Binding("text", "text").makeTwoWay())
+                            new go.Binding("text", "text", t => t.match(/^\s*note|^\s*\*/ig)? null : t.length > 40? t.substring(0, 40)+'...' : t).makeTwoWay()) //t => {t.length > 16 ? t.substring(0, 16)+'...' : t} 
                     ),  // end Horizontal Panel
                     $(go.Placeholder,
                         { padding: 5, alignment: go.Spot.TopLeft })
@@ -128,7 +128,7 @@ export default class regroupingController {
                                 opacity: 0.75,
                                 stroke: "#404040"
                             },
-                            new go.Binding("text", "text").makeTwoWay())
+                            new go.Binding("text", "text", t => t.match(/^\s*note|^\s*\*/ig)? null : t.length > 16? t.substring(0, 8)+'...'+t.substring(t.length-8) : t).makeTwoWay())
                     ),  // end Horizontal Panel
                     $(go.Placeholder,
                         { padding: 5, alignment: go.Spot.TopLeft })
@@ -151,17 +151,22 @@ export default class regroupingController {
                         opacity: 0.75,
                         stroke: "#404040"
                     },
-                    new go.Binding("text", "text").makeTwoWay())
+                    new go.Binding("text", "text", t => t.match(/^\s*note|^\s*\*/ig)? null :  t.length > 16? t.substring(0, 8)+'...'+t.substring(t.length-8) : t).makeTwoWay())
             );
 
+        // myDiagram.addModelChangedListener(function(evt) {
+        //     if (evt.isTransactionFinished) saveModel(evt.model);
+        //     });
+        myDiagram.addModelChangedListener(onChange);
+
         // initialize the Palette and its contents
-        var myPalette =
+        var myPalette = isPaletteOn ?
             $(go.Palette, "myPaletteDiv",
                 {
                     nodeTemplateMap: myDiagram.nodeTemplateMap,
                     groupTemplateMap: myDiagram.groupTemplateMap,
                     layout: $(go.GridLayout, { wrappingColumn: 1, alignment: go.GridLayout.Position })
-                });
+                }) : {};
         myPalette.model = new go.GraphLinksModel([
             { text: "lightgreen", color: "#ACE600" },
             { text: "yellow", color: "#FFDD33" },
@@ -172,7 +177,8 @@ export default class regroupingController {
         // slider.addEventListener('change', reexpand);
         // slider.addEventListener('input', reexpand);
 
-        this.load();
+        this.load(myDiagram, data);
+        return myDiagram;
     }
 
     expandGroups(g, i, level) {
@@ -182,7 +188,7 @@ export default class regroupingController {
             expandGroups(m, i + 1, level);
         })
     }
-    reexpand(e) {
+    reexpand(e, myDiagram) {
         myDiagram.startTransaction("reexpand");
         var level = parseInt(document.getElementById("levelSlider").value);
         myDiagram.findTopLevelGroups().each(function (g) { expandGroups(g, 0, level); })
@@ -190,11 +196,17 @@ export default class regroupingController {
     }
 
     // save a model to and load a model from JSON text, displayed below the Diagram
-    static save() {
-        document.getElementById("mySavedModel").value = myDiagram.model.toJson();
-        myDiagram.isModified = false;
+    // static save(myDiagram, id) { //default id: "mySavedModel"
+    //     document.getElementById(id).value = myDiagram.model.toJson();
+    //     myDiagram.isModified = false;
+    // }
+    // static load(myDiagram, id) {
+    //     myDiagram.model = go.Model.fromJson(document.getElementById(id).value);
+    // }
+    static extract(myDiagram) {
+        return myDiagram.model.toJson();
     }
-    static load() {
-        myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+    static load(myDiagram, data) {
+        myDiagram.model = go.Model.fromJson(data);
     }
 }

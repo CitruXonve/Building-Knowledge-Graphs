@@ -1,0 +1,125 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Manrope:wght@200&display=swap');
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+
+table {
+    table-layout: fixed;
+    word-wrap:break-word;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  /* color: #7c7c7c; */
+}
+
+h3 {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: normal;
+  /* color: #7c7c7c; */
+}
+
+p {
+  font-size: 0.8em;
+  letter-spacing: 0px;
+  text-align: center;
+  font-weight: normal;
+  /* color: #7c7c7c; */
+}
+
+#photorcorners {
+  border-radius: 25px;
+  border: 1px solid #33cccc;
+}
+
+#logo_h2 {
+  padding: 10px;
+  font-size: 1.4em;
+  font-family: 'Lobster Two', cursive;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
+}
+
+
+#logo_h2:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.myfancyfont {
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.myfancyfont2 {
+  font-family: 'Lobster Two', cursive;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-radius: 25px;
+  border: 1px solid #000000;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  background-color: grey;
+}
+
+
+
+.navbar .navbar-default{
+    background-image: url('./header.png');
+}
+
+form{
+    margin:5px;
+    display:inline;
+    }
